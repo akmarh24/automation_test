@@ -12,7 +12,7 @@ end
 Then(/^user should be redirected to git dashboard page$/) do
   @login_page = LoginPage.new
   @login_page.wait_until_welcome_visible
-  expect(@login_page.welcome).to have_text('Learn Git and GitHub without any code!')
+  expect(@login_page.welcome).to have_text('akmarh24')
 
   sleep 5
 end
