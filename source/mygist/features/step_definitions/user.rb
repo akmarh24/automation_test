@@ -29,14 +29,14 @@ end
 
 Then(/^success deleted gist$/) do
   @addgist_page = Gistpage.new
-  @addgist_page.wait_until_view_all_gist_visible
-  expect(@@addgist_page.view_all_gist).to have_text('test1')
+  @addgist_page.wait_until_view_gist_visible
+  expect(@@addgist_page.view_gist).to have_text('')
 end
 
 Then(/^should be directed on list gist page$/) do
   @addgist_page = Gistpage.new
-  @addgist_page.wait_until_view_all_gist_visible
-  expect(@@addgist_page.view_all_gist).to have_text('test1')
+  @addgist_page.wait_until_view_gist_visible
+  expect(@@addgist_page.view_gist).to have_text('test1')
 end
 
 end
