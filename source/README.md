@@ -7,14 +7,14 @@
 Clone the repository and install all gems depedency:
 ```shell
 $ git clone git@github.com:akmarh24/automation_test.git
-$ cd akmar/
+$ cd user/
 $ bundle install
 $ cp .env.example .env
 ```
 ### How to run
-open terminal
-cd on path source/mygist
-cucumber features/user.feature
+$ open terminal
+$ cd on path source/mygist
+$ cucumber features/user.feature
 
 ### Noted
 please makesure for your internet connection is stable
