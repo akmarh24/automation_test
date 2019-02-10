@@ -1,0 +1,1593 @@
+<html><head>
+	<link rel="stylesheet" type="text/css" href="/assets/new-talenta/fort-awesome/2c2b6e96.css">
+			<title>Dashboard - PT. Demo Performance Review Sejahtera</title>
+	
+
+	<meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="4FvMAP6QOQIgt1zaiOpQ2wNC2G2esGrzEm81kXiQkui5Lp9BufxpYEbhZa2_kxnrexGaD9qIUqt-OkH_VcWkoQ==">
+
+		<link rel="shortcut icon" href="/assets/images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/assets/new-talenta/plugins/dataTable/datatables.min.css">
+		<link rel="stylesheet" type="text/css" href="/assets/new-talenta/css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="/assets/new-talenta/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/new-talenta/css/jquery.bxslider.css">
+	<link rel="stylesheet" type="text/css" href="/assets/new-talenta/css/introjs.css">
+	<link rel="stylesheet" type="text/css" href="/assets/new-talenta/css/magicsuggest-min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/new-talenta/css/image-slider.css">
+			<link rel="stylesheet" type="text/css" href="/assets/new-talenta/css/style.css">
+	
+	
+	<script type="text/javascript" async="" src="https://widget.intercom.io/widget/vxl06bpi"></script><script type="text/javascript" src="/assets/new-talenta/js/moment.min.js"></script>
+	<script type="text/javascript" src="/assets/new-talenta/js/image-slider.js"></script><style></style>
+	<script type="text/javascript" src="/assets/new-talenta/js/jquery-2.1.4.min.js"></script>
+<link rel="stylesheet" type="text/css" id="u0" href="https://stag7.talentadev.com/assets/5e187cd3/skins/lightgray/skin.min.css"></head>
+<body>
+
+
+	
+<!-- Header -->
+<div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <div class="container">
+                        <a href="/employee/dashboard" class="brand-logo">
+                <img src="https://s3-ap-southeast-1.amazonaws.com/talenta/company_logo/75zLQC9UBXiA_yODM4kHj6s8OYhmYwp8.jpg" height="50">
+              </a>
+                    <ul class="right hide-on-med-and-down">
+                            <li style="overflow: hidden;">
+              <a href="/inbox/index" class="iconNav"><i class="fa fa-envelope"></i>
+                                  <span class="notifIcon">9</span>
+                              </a>
+              </li>
+                          <!-- <li><a href="sass.html" class="iconNav"><i class="fa fa-question-circle iconHeader"></i></a></li> -->
+            <li>
+              <a class="dropdown-button headerDropdown" href="#!" data-activates="dropdown1" data-beloworigin="true" data-constrainwidth="false" data-hover="true" data-clicktoggle="true">
+                <img class="circle responsive-img iconAvatar" src="https://stag7.talentadev.com/uploads/avatar/blank.jpg" width="20">
+                  Admin Performance Review                <i class="mdi-navigation-arrow-drop-down right"></i>
+              </a><ul id="dropdown1" class="dropdown-content">
+                                            <li><a href="/setting">Settings</a></li>
+            <li><a href="http://help.talenta.co" target="_blank">Help</a></li>
+            <li><a href="javascript:void(null);" id="needSupportButton">Need Support?</a></li>
+                            <li><a href="https://www2.talenta.co/site/automatic-authorize?parameter=17A47BD3710159A0639D70EBE415C45C">Experience the new TALENTA</a></li>
+                        <li class="divider"></li>
+                              <li><a href="/site/sign-out">Sign Out</a></li>
+        </ul>
+            </li>
+              <!-- Dropdown Structure -->
+        
+          </ul><!-- right hide-on-med-and-down -->
+        </div><!-- container -->
+      </div><!-- nav-wrapper -->
+    </nav>
+</div><!-- navbar-fixed -->
+<div class="nav2">
+  <nav class="nav2">
+    <div class="nav-wrapper">
+            <div class="container">
+        <a href="#" data-activates="mobileNav" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                      <li class="active"><a href="/employee/dashboard">Dashboard</a></li>
+                   
+              
+                              <li>
+                                                <a href="/employee/index">Employees</a></li>
+                        
+                                                                                      <li>
+                      <a href="/time-off/index">Time Off</a>
+                    </li>
+                                                                                    <li><a href="/payroll-system/index">Payroll</a></li>
+                  <li><a href="/employee/company-calendar">Calendar</a></li>
+          <li><a href="/company/index">Company</a></li>
+          <!-- <li  ><a href="#">Files</a></li> -->
+        </ul>
+        <ul class="side-nav" id="mobileNav" style="left: -250px;">
+          <li class="active"><a href="/employee/dashboard">Dashboard</a></li>
+          <li><a href="/index.php?r=my-info/index">My Info</a></li>
+                      <li><a href="/my-info/time-off?id=61274">Time Off</a></li>
+                    <li><a href="/employee/address-book?id=A">Employees</a></li>
+                      <li><a href="/my-info/over-time-info?id=61274">Overtime</a></li>
+                    <li><a href="/employee/company-calendar">Calendar</a></li>
+          <li><a href="/company/index">Company</a></li>
+          <!-- <li  ><a href="#">Files</a></li> -->
+          <li class="divider"></li>
+          <li><a href="/setting">Settings</a></li>
+          <li><a href="/site/faq">FAQs</a></li>
+          <li><a href="/site/support">Need Support?</a></li>
+          <li class="divider"></li>
+          <li><a href="/site/sign-out">Sign Out</a></li>
+                  </ul>
+      </div>
+        </div>
+  </nav>
+</div>
+<div id="payrollProgressDiv" class="displayNone progressContainer">
+  <p class="bgRed2 white-text pad-10 lato-light mt0 center-align progressTitle">Run payroll progress</p>
+  <div class="pad-10">
+    <div class="progress center-align" id="payrollProgressAll">
+        <span class="progressSpan"></span>
+        <div class="determinate" id="payrollProgress"></div>
+    </div>
+    <div class="right-align" id="cancelQueueDiv"><a href="javascript:void(0)" id="cancelQueueConfirm">Stop</a></div>
+  </div>
+</div>
+
+<!-- <div id="info-talenta" class="btn-help">
+    <img class="mr5" src="/assets/new-talenta/images/Help-Icon.png" width="20"><span>HELP</span>
+    <div id="notif-chat" class="displayNone">
+        <span>New!</span>
+    </div>
+</div> -->
+
+<!-- <div class="wrap-menu-help">
+    <div class="menu-help">
+        <div class="header-help">
+            <p class="no-margin">Get Help!</p>
+            <img class="close-help" src="/assets/new-talenta/images/help-close.png" width="20">
+        </div>
+        <ul class="padding-lr10 margin-top-10">
+            <li><a href="tel:02130021660"><img class="mr15" src="/assets/new-talenta/images/help-telp.png" width="30"><span>02130021660</span></a></li>
+            <hr class="mbt10">
+            <li><a href="mailto:contact@talenta.co"><img class="mr15" src="/assets/new-talenta/images/help-email.png" width="30"><span>Email us</span></a></li>
+            <hr class="mbt10">
+            <li id="chat-intercom" class="intercom-launcher" ><img class="mr15" src="/assets/new-talenta/images/help-intercom.png" width="30"><span>Chat with Talenta</span>
+            <span class="intercom-unread-count"></span>
+            </li>
+             QISCUS INTEGRATION
+                            <hr class="mbt10">
+                <li id="chat-qiscus"><img class="mr15" src="/assets/new-talenta/images/help-qiscus.png" width="30"><span>Chat</span></li>
+                        QISCUS INTEGRATION
+        </ul>
+    </div>
+</div> -->
+
+
+<!-- <div id="close-intercome" class="btn-help">
+  <img src="/assets/new-talenta/images/help-close.png" width="20">
+</div>
+
+<div id="close-qiscus" class="btn-help" style="max-width: 60px;">
+  <img src="/assets/new-talenta/images/help-close.png" width="20">
+</div> -->
+
+<!-- Modal Queue Process Running -->
+<div id="modalRunningProcess" class="modal h200 w370">
+  <div class="modal-content">
+      <h1 class="center-align titleA01">Please wait</h1>
+      <p class="center-align">Another <span id="qRunningType"></span> process is running now</p>
+      <p class="center-align" id="url"></p>
+  </div>
+</div>
+<!-- Modal Queue Process Running -->
+
+<!-- Modal Confirm Cancel Queue -->
+<div id="modalCancelQueue" class="modal modal-fixed-footer modal-confirm h40p w400">
+  <div class="modal-content">
+      <h5 class="center-align subtitleB01">Stop Process</h5>
+      <p class="center-align">You will lose all progress.<br>Are you sure you want to stop this process?</p>
+  </div>
+  <div class="modal-footer" id="confirmCancelQueue">
+    <a href="#!" class="modal-action modal-close btn btnB01">No</a>
+    <a href="#!" class="btn btnB01 mr5" id="cancelQueue">Yes</a>
+  </div>
+</div>
+<!-- Modal Confirm Cancel Queue -->
+
+
+<!-- QISCUS INTEGRATION  -->
+<input type="hidden" value="/payroll-system/get-progress-bar" id="getProgressBar">
+<input type="hidden" id="urlGetQRunning" value="/payroll-system/get-queue-running">
+<input type="hidden" id="urlCancelQueue" value="/payroll-system/cancel-queue">
+<input type="hidden" name="fileDownload" id="fileDownload" value="">
+<input type="hidden" id="urlSessionFileDownloadClear" value="/employee/session-file-download-clear">
+
+		<!-- Header -->
+
+			<div class="bodyWeb mt40">
+				
+<div class="row center-align dashboard-statusBlock mb0">
+    <div class="container">
+      <div class="col l4 m12 s12 left-align dashboard-photoBlock">
+        <img class="circle dashboard-imgEmployer" src="https://stag7.talentadev.com/uploads/avatar/blank.jpg" onerror="this.onerror=null; this.src='https://stag7.talentadev.com/uploads/avatar/blank.jpg'">
+        <h2 class="dashboard-employerName">Admin Performance Review</h2>
+                  <p class="dashboard-employerJob">
+          Manager IT        </p>
+              </div>
+            <div class="col l6 m12 s12">
+        <div class="bx-wrapper" style="max-width: 0px; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative;"><div class="slider2" style="width: 215%; position: relative;">
+            
+                    </div></div></div>
+      </div>
+      <div class="col l2 dashboard-timeoffBlock">
+        <p class="dashboard-leave">TIME OFF</p>
+        <a href="/my-info/time-off?id=61274" class="btn btnB01 mt20 clearfix">Request</a>
+        <div class="clearfix"></div>
+        <a class="linkB01 mt10 displayBlock" href="/my-info/time-off?id=61274">view History</a>
+            </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col l9">
+      <div class="container dashboard-mainContentContainer">
+        <div class="col l12">
+          <!-- <div id="sliderFrame" class="mb10">
+              <div id="slider">
+                  <a href="http://bit.ly/2kPHjyu" target="_blank">
+                      <img src="/assets/new-talenta/images/banner/travelio-1.jpg">
+                  </a>
+                   <a href="http://bit.ly/2kPHjyu" target="_blank">
+                      <img src="/assets/new-talenta/images/banner/travelio-2.jpg">
+                  </a>
+                  <a href="https://blog.talenta.co/" target="_blank">
+                      <img src="/assets/new-talenta/images/banner/talenta_blog_banner.jpg">
+                  </a>
+              </div>
+          </div> -->
+
+          <p><a href="https://blog.talenta.co" target="_blank">
+            <img src="/assets/new-talenta/images/talenta_blog_banner.gif">
+          </a></p>
+          <h1 class="titleB01">Welcome, Admin.</h1>
+          <p class="paragraphB01 lineHeight14">Talenta empowers you to store all informations regarding your employee in one place. You can also control all HR processes such as Time Off Requests, Overtime Requests, and processing Payroll, all under one place.</p>
+        </div>
+        <div class="col l12">
+          <p class="titleB02">Shortcut</p>
+        </div>
+        <div class="col l12">
+                    <a class="col l3 dashboard-shortcut btnAddNewEmployee">
+            <!-- <img class="dashboard-imgShortcut" src="/assets/new-talenta/images/dashboard-imgShortcut-addEmployee.png"> -->
+            <p><i class="fa fa-user-plus fa-5x"></i></p>
+            Add Employee
+          </a>
+                              <a class="col l3 dashboard-shortcut" href="/employee/view-attendance">
+            <!-- <img class="dashboard-imgShortcut" src="/assets/new-talenta/images/dashboard-imgShortcut-addFiles.png"> -->
+            <p><i class="fa fa-user fa-5x"></i></p>
+            Attendance
+          </a>
+                                          <a href="/payroll-system/index" class="col l3 dashboard-shortcut">
+            <!-- <img class="dashboard-imgShortcut" src="/assets/new-talenta/images/dashboard-imgShortcut-processPayroll.png"> -->
+            <p><i class="fa fa-calculator fa-5x"></i></p>
+            Payroll
+          </a>
+                                        <a class="col l3 dashboard-shortcut" href="/my-info/index?id=61274">
+            <!-- <img class="dashboard-imgShortcut" src="/assets/new-talenta/images/dashboard-imgShortcut-addFiles.png"> -->
+            <p><i class="fa fa-info-circle fa-5x"></i></p>
+            My Info
+          </a>
+                              <!-- <a class="col l3 dashboard-shortcut">
+            <img class="dashboard-imgShortcut" src="/assets/new-talenta/images/dashboard-imgShortcut-createOnboardingPage.png">
+            Create Onboarding Page
+          </a> -->
+        </div>
+        <div class="clearfix"></div>
+
+                <!-- Apps -->
+        <div class="col l12">
+          <p class="titleB02">Apps</p>
+        </div>
+        <div class="col l12">
+          <a class="col l3 dashboard-shortcut apps" id="reviewConnectButton">
+            <p><i class="fa fa-bar-chart fa-5x"></i></p>
+            Performance<br>Review
+          </a>
+          <a class="col l3 dashboard-shortcut apps" id="trainingConnectButton">
+            <p><i class="fa fa-book fa-5x"></i></p>
+            Training
+          </a>
+          <a class="col l3 dashboard-shortcut apps" id="recruitmentConnectButton">
+            <p><i class="fa fa-users fa-5x"></i></p>
+            Recruitment
+          </a>
+          <a class="col l3 dashboard-shortcut apps" href="/commerce/index">
+            <p><i class="fa fa-shopping-cart fa-5x"></i></p>
+            Commerce
+          </a>
+        </div>
+        <!-- End Apps -->
+                
+        <div class="div-html-polls" data-intro="Talenta new feature" data-step="1" data-position="right">
+<div class="clearfix"></div>
+<!-- Start polls -->
+<div class="new-tal-polls mt10 mb10 pad-t-10 pad-b-10">
+    <div class="col l6">
+        <div class="left">
+        <p class="titleB02 mt0 mb0">Polls</p>
+        </div>
+    </div>
+    <div class="col l6">
+        <div class="right">
+            <a href="/poll/all-polls"><i class="fa fa-bars"></i> View All Polls</a>
+                                        <a class="btn-show-form-create-poll"><i class="fa fa-plus-circle"></i> Create New Polls</a>
+                            </div>
+    </div>
+</div>
+
+<!-- start body poll -->
+<div class="polls-wrap">
+    <div class="div-loading" style="display:none;">
+    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+    <span class="sr-only">Loading...</span>
+</div>
+<div class="pollsnav left btn-prev-poll" style="height: 68.4px;"></div>
+    <div class="polls-body">
+        <div class="pollsloop div-main-poll">
+            
+            
+                            <h4 style="text-align:center;">No Polls</h4>
+                    </div>
+    </div>
+    <div class="pollsnav right btn-next-poll" style="height: 68.4px;"></div>
+</div>
+<!-- end body poll -->
+<!-- End polls -->
+<!-- Modal poll -->
+<div id="pollvotemodal" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4 class="title-modal-table-participant"></h4><hr>
+        <ul class="list-response-user"></ul>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close btn btnB01">Close</a>
+    </div>
+</div>
+<div class="clearfix"></div>
+</div>
+        
+<div id="poll-modal" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4 class="title-poll">Create Polls</h4>
+        <hr>
+        <form id="w0" class="form-poll form-vertical" action="/poll/create" method="post">
+<input type="hidden" name="_csrf" value="4FvMAP6QOQIgt1zaiOpQ2wNC2G2esGrzEm81kXiQkui5Lp9BufxpYEbhZa2_kxnrexGaD9qIUqt-OkH_VcWkoQ==">        <input type="hidden" class="poll-id" name="PollForm[poll_id]">
+         <div class="row mb0">
+            <div class="col l12">
+                <div class="form-group field-pollform-question">
+<label class="control-label" for="pollform-question">Question</label>
+<textarea id="pollform-question" class="materialize-textarea txt-question" name="PollForm[question]"></textarea>
+
+<div class="help-block"></div>
+</div>
+                <label>Options </label>
+                <div class="row mb0 ml0 mr0" style="text-align:right;">
+                    <span class="btn btnB01 btn-add">Add Options</span>
+                </div>
+                <div class="row mb0 ml0 mr0">
+                    <ul class="polls-option div-option mr0 ml0" data-exp="1">
+                        <li class="parrent-option child-option">
+                            <!-- <label class="counter"></label> -->
+                            <div class="poll-type-vote">
+                                <input type="hidden" class="list-answer-id" name="PollForm[poll_answer_id][]" value="">                                <input type="hidden" class="txt-sort" name="PollForm[sort][]" value="0">                                <div class="form-group field-pollform-answers">
+
+<input type="text" id="pollform-answers" class="txt-options" name="PollForm[answers][]" placeholder="Options">
+
+<div class="help-block"></div>
+</div>                                <span id="callmodalvoter" class="btn-remove" title="Remove Option">-</span>                            </div>
+                            <div class="poll-up-dw">
+                                <span class="vtupdown btn-option-up"><i class="fa fa-arrow-up"></i></span>
+                                <span class="vtupdown btn-option-down"><i class="fa fa-arrow-down"></i></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div><br>
+
+                <label>End Date </label>
+                <div class="form-group field-pollform-end_date">
+
+<input type="text" id="pollform-end_date" class="datepicker txt-end-date picker__input" name="PollForm[end_date]" readonly="" placeholder="End Date" tabindex="-1" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="pollform-end_date_root"><div class="picker" id="pollform-end_date_root" tabindex="0" aria-hidden="true"><div class="picker__holder"><div class="picker__frame"><div class="picker__wrap"><div class="picker__box"><div class="picker__date-display"><div class="picker__weekday-display">Sunday</div><div class="picker__month-display"><div>Feb</div></div><div class="picker__day-display"><div>10</div></div><div class="picker__year-display"><div>2019</div></div></div><div class="picker__calendar-container"><div class="picker__header"><select class="picker__select--month browser-default" disabled="" aria-controls="pollform-end_date_table" title="Select a month"><option value="0">January</option><option value="1" selected="">February</option><option value="2">March</option><option value="3">April</option><option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option><option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option></select><select class="picker__select--year browser-default" disabled="" aria-controls="pollform-end_date_table" title="Select a year"><option value="1900">1900</option><option value="1901">1901</option><option value="1902">1902</option><option value="1903">1903</option><option value="1904">1904</option><option value="1905">1905</option><option value="1906">1906</option><option value="1907">1907</option><option value="1908">1908</option><option value="1909">1909</option><option value="1910">1910</option><option value="1911">1911</option><option value="1912">1912</option><option value="1913">1913</option><option value="1914">1914</option><option value="1915">1915</option><option value="1916">1916</option><option value="1917">1917</option><option value="1918">1918</option><option value="1919">1919</option><option value="1920">1920</option><option value="1921">1921</option><option value="1922">1922</option><option value="1923">1923</option><option value="1924">1924</option><option value="1925">1925</option><option value="1926">1926</option><option value="1927">1927</option><option value="1928">1928</option><option value="1929">1929</option><option value="1930">1930</option><option value="1931">1931</option><option value="1932">1932</option><option value="1933">1933</option><option value="1934">1934</option><option value="1935">1935</option><option value="1936">1936</option><option value="1937">1937</option><option value="1938">1938</option><option value="1939">1939</option><option value="1940">1940</option><option value="1941">1941</option><option value="1942">1942</option><option value="1943">1943</option><option value="1944">1944</option><option value="1945">1945</option><option value="1946">1946</option><option value="1947">1947</option><option value="1948">1948</option><option value="1949">1949</option><option value="1950">1950</option><option value="1951">1951</option><option value="1952">1952</option><option value="1953">1953</option><option value="1954">1954</option><option value="1955">1955</option><option value="1956">1956</option><option value="1957">1957</option><option value="1958">1958</option><option value="1959">1959</option><option value="1960">1960</option><option value="1961">1961</option><option value="1962">1962</option><option value="1963">1963</option><option value="1964">1964</option><option value="1965">1965</option><option value="1966">1966</option><option value="1967">1967</option><option value="1968">1968</option><option value="1969">1969</option><option value="1970">1970</option><option value="1971">1971</option><option value="1972">1972</option><option value="1973">1973</option><option value="1974">1974</option><option value="1975">1975</option><option value="1976">1976</option><option value="1977">1977</option><option value="1978">1978</option><option value="1979">1979</option><option value="1980">1980</option><option value="1981">1981</option><option value="1982">1982</option><option value="1983">1983</option><option value="1984">1984</option><option value="1985">1985</option><option value="1986">1986</option><option value="1987">1987</option><option value="1988">1988</option><option value="1989">1989</option><option value="1990">1990</option><option value="1991">1991</option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019" selected="">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option><option value="2032">2032</option><option value="2033">2033</option><option value="2034">2034</option><option value="2035">2035</option><option value="2036">2036</option><option value="2037">2037</option></select><div class="picker__nav--prev" data-nav="-1" role="button" aria-controls="pollform-end_date_table" title="Previous month"> </div><div class="picker__nav--next" data-nav="1" role="button" aria-controls="pollform-end_date_table" title="Next month"> </div></div><table class="picker__table" id="pollform-end_date_table" role="grid" aria-controls="pollform-end_date" aria-readonly="true"><thead><tr><th class="picker__weekday" scope="col" title="Sunday">S</th><th class="picker__weekday" scope="col" title="Monday">M</th><th class="picker__weekday" scope="col" title="Tuesday">T</th><th class="picker__weekday" scope="col" title="Wednesday">W</th><th class="picker__weekday" scope="col" title="Thursday">T</th><th class="picker__weekday" scope="col" title="Friday">F</th><th class="picker__weekday" scope="col" title="Saturday">S</th></tr></thead><tbody><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548522000000" role="gridcell" aria-label="27 January, 2019">27</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548608400000" role="gridcell" aria-label="28 January, 2019">28</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548694800000" role="gridcell" aria-label="29 January, 2019">29</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548781200000" role="gridcell" aria-label="30 January, 2019">30</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548867600000" role="gridcell" aria-label="31 January, 2019">31</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1548954000000" role="gridcell" aria-label="1 February, 2019">1</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549040400000" role="gridcell" aria-label="2 February, 2019">2</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549126800000" role="gridcell" aria-label="3 February, 2019">3</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549213200000" role="gridcell" aria-label="4 February, 2019">4</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549299600000" role="gridcell" aria-label="5 February, 2019">5</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549386000000" role="gridcell" aria-label="6 February, 2019">6</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549472400000" role="gridcell" aria-label="7 February, 2019">7</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549558800000" role="gridcell" aria-label="8 February, 2019">8</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549645200000" role="gridcell" aria-label="9 February, 2019">9</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus picker__day--today picker__day--highlighted" data-pick="1549731600000" role="gridcell" aria-label="10 February, 2019" aria-activedescendant="true">10</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549818000000" role="gridcell" aria-label="11 February, 2019">11</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549904400000" role="gridcell" aria-label="12 February, 2019">12</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549990800000" role="gridcell" aria-label="13 February, 2019">13</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550077200000" role="gridcell" aria-label="14 February, 2019">14</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550163600000" role="gridcell" aria-label="15 February, 2019">15</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550250000000" role="gridcell" aria-label="16 February, 2019">16</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550336400000" role="gridcell" aria-label="17 February, 2019">17</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550422800000" role="gridcell" aria-label="18 February, 2019">18</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550509200000" role="gridcell" aria-label="19 February, 2019">19</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550595600000" role="gridcell" aria-label="20 February, 2019">20</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550682000000" role="gridcell" aria-label="21 February, 2019">21</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550768400000" role="gridcell" aria-label="22 February, 2019">22</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550854800000" role="gridcell" aria-label="23 February, 2019">23</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550941200000" role="gridcell" aria-label="24 February, 2019">24</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1551027600000" role="gridcell" aria-label="25 February, 2019">25</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1551114000000" role="gridcell" aria-label="26 February, 2019">26</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1551200400000" role="gridcell" aria-label="27 February, 2019">27</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1551286800000" role="gridcell" aria-label="28 February, 2019">28</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551373200000" role="gridcell" aria-label="1 March, 2019">1</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551459600000" role="gridcell" aria-label="2 March, 2019">2</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551546000000" role="gridcell" aria-label="3 March, 2019">3</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551632400000" role="gridcell" aria-label="4 March, 2019">4</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551718800000" role="gridcell" aria-label="5 March, 2019">5</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551805200000" role="gridcell" aria-label="6 March, 2019">6</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551891600000" role="gridcell" aria-label="7 March, 2019">7</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551978000000" role="gridcell" aria-label="8 March, 2019">8</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1552064400000" role="gridcell" aria-label="9 March, 2019">9</div></td></tr></tbody></table></div><div class="picker__footer"><button class="btn-flat picker__today" type="button" data-pick="1549731600000" disabled="" aria-controls="pollform-end_date">Today</button><button class="btn-flat picker__clear" type="button" data-clear="1" disabled="" aria-controls="pollform-end_date">Clear</button><button class="btn-flat picker__close" type="button" data-close="true" disabled="" aria-controls="pollform-end_date">Select</button></div></div></div></div></div></div><input type="hidden" name="PollForm[end_date]_submit">
+
+<div class="help-block"></div>
+</div>
+                <!-- start filter option -->
+                <div class="mb10">
+                    <input type="button" value="Filter Participant" class="btn btnB01 add-employee">
+                </div>
+                <div class="mb15">
+                    <input type="hidden" class="list-employee-id" name="PollForm[list_employee_id]">                    <input type="hidden" class="list-employee-name" name="PollForm[list_employee_name]">                </div>
+                <div class="mb15">
+                    <input type="checkbox" class="filled-in chk-create-answer" id="create-answer" name="PollForm[create_answer]" value="1">
+                    <label for="create-answer">Allow participant to create other answer</label>
+                </div>
+                <div class="mb15">
+                    <input type="checkbox" class="filled-in chk-enable-comment" id="enable-comment" name="PollForm[enable_comment]" value="1">
+                    <label for="enable-comment">Allow participant to comment</label>
+                </div>
+                                    <div class="mb15">
+                        <input type="checkbox" class="filled-in" id="send-mail" name="PollForm[send_mail]" value="1">
+                        <label for="send-mail">Send notifications to participant</label>
+                    </div>
+                                
+                <!-- end filter option -->
+            </div>
+        </div>
+        </form>    </div>
+    <div class="modal-footer">
+        <a class="modal-action modal-close btn btnB01">Back</a>        <a class="btn btnB01 btn-create-poll mr5">Save</a>    </div>
+  </div>
+
+<div id="modal-select-employee" class="modal modal-fixed-footer w1000 h600">
+    <div class="modal-content">
+        <h4 class="title-modal-table-participant">List Employee</h4>
+        <hr>
+        <table class="bordered" id="dataTableCustomRunSinglePayroll" border="0">
+            <thead>
+                <tr class="grey lighten-3">
+                    <th class="center-align td-chk"><input type="checkbox" class="filled-in checkboxHeader" id="checkAllCustomRunSinglePayroll"><label for="checkAllCustomRunSinglePayroll"></label></th>
+                    <th>Employee ID</th>
+                    <th>Full Name</th>
+                    <th>Branch</th>
+                    <th>Job</th>
+                    <th>Organization</th>
+                    <th>Job Level</th>
+                </tr>
+                <tr class="filterrow grey lighten-3" style="display: none;">
+                    <th class="td-chk"></th>
+                    <th>Employee ID</th>
+                    <th>Full Name</th>
+                    <th>Branch</th>
+                    <th>Job</th>
+                    <th>Organization</th>
+                    <th>Job Level</th>
+                </tr>
+            </thead>
+            <tbody class="tbody-content-modal-custom-run-single-payroll">
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-footer fix1" style="text-align: right;">
+        <a href="#!" class="modal-action modal-close btn btnB01">Close</a>
+        <a href="#!" class="btn btnB01 btn-select-employee mr5">Select</a>
+    </div>
+</div>
+
+<!-- Modal Confrim create Poll -->
+<div id="modal-confrim-create-poll" class="modal modal-fixed-footer h40p w360 lineHeight14">
+    <div class="modal-content">
+        <p class="message">Are you sure want to create this polls?</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close btn btnB01 right">Cancel</a>
+        <button class="btn btnB01 right mr5 btn-confirm-create-poll">Confirm</button>
+        <!-- <a href="#!" class="btn btnB01 right mr5 btn-confirm-create-poll">Confirm</a> -->
+    </div>
+</div>
+
+<!-- Modal Confrim Vote Poll -->
+<div id="modal-confrim-vote-poll" class="modal modal-fixed-footer h40p w360 lineHeight14">
+    <div class="modal-content">
+        <input type="hidden" class="hd-id-polls">
+        <input type="hidden" class="polls-answer">
+        <input type="hidden" class="polls-other-answer">
+        <p class="message">Are you sure want to vote this polls?</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close btn btnB01 right">Cancel</a>
+        <a href="#!" class="btn btnB01 right mr5 btn-confirm-response">Confirm</a>
+    </div>
+</div>
+
+<!-- Modal Confrim Delete Poll -->
+<div id="modal-confrim-delete-poll" class="modal modal-fixed-footer h40p w360 lineHeight14">
+    <div class="modal-content">
+        <input type="hidden" class="hd-id-polls">
+        <p class="message">Are you sure want to delete this polls?</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close btn btnB01 right">Cancel</a>
+        <a href="#!" class="btn btnB01 right mr5 btn-confirm-delete-poll">Confirm</a>
+    </div>
+</div>
+<input type="hidden" id="urlListEmployee" name="urlListEmployee" value="/poll/get-list-employee">        <div class="clearfix"></div>
+
+        <div class="row mt30 mr0 ml0">
+          <div class="col l12">
+            <ul class="tabs" style="width: 100%;">
+                            <li class="tab col s3" style="width: 33.3333%;"><a href="#activityTab" class="active"><i class="fa fa-bars"></i>Contract &amp; Probation</a></li>
+                            <li class="tab col s3" style="width: 33.3333%;"><a href="#taskTab"><i class="fa fa-pencil"></i> Task</a></li>
+              <li class="tab col s3" style="width: 33.3333%;"><a href="#announcementTab"><i class="fa fa-bullhorn"></i> Announcement</a></li>
+            <div class="indicator" style="right: 412.533px; left: 0px;"></div></ul>
+          </div>
+          <div class="col l12">
+            <div id="taskTab" class="col s12 tab-content" style="display: none;">
+                <div class="row right-align">
+                  <a class="btn btnB01 mt20 clearfix modal-trigger" href="#modalTask">Add</a>
+                  <a href="/tasks/index" class="btn btnB01 mt20 clearfix">View All</a>
+                </div>
+                                <table class="dashboard-taskTable">
+                    <thead>
+                      <tr>
+                          <th data-field="name" width="160">Task Name</th>
+                          <th data-field="price" width="150">Task Giver</th>
+                          <th data-field="price" width="150">Given To</th>
+                          <th data-field="price" width="150">Time</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                                          <tr>
+                        <td class="left-align">
+                                                      <p class="dashboard-taskTitle">
+                            <a class="red1-text" href="/tasks/update?id=751">Jurnal posting to GL</a>
+                            </p>
+                                                    <p class="dashboard-taskDesc">Buat report jurnal untuk finance dari hasil payroll bulan ini</p>
+                        </td>
+                        <td class="dashboard-tableTaskName">Admin .P</td>
+                        <td class="dashboard-tableTaskName">Marcelo .D</td>
+                        <td>1 year ago</td>
+                      </tr>
+                                         </tbody>
+                </table>
+                        </div>
+            <div id="announcementTab" class="col s12 tab-content" style="display: none;">
+                <div class="row right-align">
+                                  <a class="btn btnB01 mt20 clearfix modal-trigger" href="#modalAnnouncement">Add</a>
+                                  <a href="/announcement/index" class="btn btnB01 mt20 clearfix">View All</a>
+                </div>
+                                        <div class="row center-align grey lighten-2 dashboardNoActivity valign-wrapper">
+                            <p class="center-align valign white-text">There is No Announcement</p>
+                        </div>
+                                </div>
+                        <div id="activityTab" class="col s12 tab-content">
+                                                          <a class="btn btnB01 left mr5" id="employeeTransferDashboard"><i class="fa fa-plus-circle left mtm3"></i><span class="left">Change Employee Status</span></a>
+                                        <div id="dataTable-EmployeeDashboard_wrapper" class="dataTables_wrapper no-footer"><div id="dataTable-EmployeeDashboard_filter" class="dataTables_filter"><div class="input-field col s12 pad-r-n"><input type="search" id="search_dataTable-EmployeeDashboard" class="" placeholder="" aria-controls="dataTable-EmployeeDashboard"><label for="search_dataTable-EmployeeDashboard" class="active">Search</label></div></div><div class="dataTables_length" id="dataTable-EmployeeDashboard_length"><div class="input-field col s12 pad-l-n"><label class="active">Showing</label> <div class="select-wrapper initialized"><span class="caret"><i class="fa fa-plus"></i></span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-9601b2e8-175b-e62f-252f-044d5775a57a" value="10"><ul id="select-options-9601b2e8-175b-e62f-252f-044d5775a57a" class="dropdown-content select-dropdown "><li class=""><span>10</span></li><li class=""><span>20</span></li><li class=""><span>50</span></li><li class=""><span>All</span></li></ul><select name="dataTable-EmployeeDashboard_length" aria-controls="dataTable-EmployeeDashboard" class="initialized"><option value="10">10</option><option value="20">20</option><option value="50">50</option><option value="-1">All</option></select></div></div></div><table class="dataTable bordered no-footer" id="dataTable-EmployeeDashboard" role="grid" aria-describedby="dataTable-EmployeeDashboard_info">
+                        <thead>
+                          <tr role="row"><th class="pad-r-n mr0 sorting_asc" tabindex="0" aria-controls="dataTable-EmployeeDashboard" rowspan="1" colspan="1" style="width: 56.2167px;" aria-sort="ascending" aria-label="
+                                
+                                  
+                                  
+                                
+                              : activate to sort column descending">
+                                <div class="col l6 pad-r-n mr0">
+                                  <input type="checkbox" class="filled-in checkboxHeader" id="checkAll-employeeDashboard">
+                                  <label for="checkAll-employeeDashboard"></label>
+                                </div>
+                              </th><th class="sorting" tabindex="0" aria-controls="dataTable-EmployeeDashboard" rowspan="1" colspan="1" style="width: 203.033px;" aria-label="Employee: activate to sort column ascending">Employee</th><th class="sorting" tabindex="0" aria-controls="dataTable-EmployeeDashboard" rowspan="1" colspan="1" style="width: 80.55px;" aria-label="Status: activate to sort column ascending">Status</th><th class="sorting" tabindex="0" aria-controls="dataTable-EmployeeDashboard" rowspan="1" colspan="1" style="width: 153px;" aria-label="End Date: activate to sort column ascending">End Date</th><th class="sorting" tabindex="0" aria-controls="dataTable-EmployeeDashboard" rowspan="1" colspan="1" style="width: 22.9833px;" aria-label=": activate to sort column ascending"><a><i class="fa fa-info-circle" title="Create resignation for this employee"></i></a></th></tr>
+                        </thead>
+                        <tbody>
+                                                    
+                                                     
+                                                 <tr role="row" class="odd">
+                                                              <td class="center-align pad-r-n mr0 sorting_1">
+                                    <div class="col s6 checkWrapper pad-r-n mr0">
+                                      <input class="filled-in" type="checkbox" name="listEmployee" data-employee="94005" data-nama="kk09 - lisa tests " id="input_checkbox_dashboard_kk09">
+                                      <label for="input_checkbox_dashboard_kk09"></label>
+                                    </div>
+                                </td>
+                                                                <td class="left-align">
+                                  <p>
+                                    <a class="red1-text bold" href="/my-info/index?id=94005" data-tooltip="kk09 - lisa tests ">kk09 - lisa tests </a></p>
+                                </td>
+                                <td>Probation                                </td><td>25 August 2018</td>
+                                                                                        <td><a class="btnResign red1-text callEmployeeResignModal" data-namakaryawan="lisa tests " data-tanggaljoin="0000-00-00" data-jabatankaryawan="Staff Sales" data-idemployee="94005" data-lengthofservice="0 Year 0 Month 0 Day" data-idkaryawan="kk09" id="resign94005"><i class="fa fa-user-times red1-text"></i></a></td>
+                                                               </tr><tr role="row" class="even">
+                                                              <td class="center-align pad-r-n mr0 sorting_1">
+                                    <div class="col s6 checkWrapper pad-r-n mr0">
+                                      <input class="filled-in" type="checkbox" name="listEmployee" data-employee="82310" data-nama="15441 - employe sample" id="input_checkbox_dashboard_15441">
+                                      <label for="input_checkbox_dashboard_15441"></label>
+                                    </div>
+                                </td>
+                                                                <td class="left-align">
+                                  <p>
+                                    <a class="red1-text bold" href="/my-info/index?id=82310" data-tooltip="15441 - employe sample">15441 - employe sample</a></p>
+                                </td>
+                                <td>Contract                                </td><td>01 December 2018</td>
+                                                                                        <td><a class="btnResign red1-text callEmployeeResignModal" data-namakaryawan="employe sample" data-tanggaljoin="2017-04-19" data-jabatankaryawan="Staff IT" data-idemployee="82310" data-lengthofservice="1 Year 9 Month 23 Day" data-idkaryawan="15441" id="resign82310"><i class="fa fa-user-times red1-text"></i></a></td>
+                                                               </tr></tbody>
+                    </table><div class="dataTables_info" id="dataTable-EmployeeDashboard_info" role="status" aria-live="polite">Showing 1 to 2 of 2 entries</div><div class="dataTables_paginate paging_simple_numbers" id="dataTable-EmployeeDashboard_paginate"><a class="dataTable_pagination previous disabled" aria-controls="dataTable-EmployeeDashboard" data-dt-idx="0" tabindex="0" id="dataTable-EmployeeDashboard_previous">&lt;</a><span><a class="dataTable_pagination current" aria-controls="dataTable-EmployeeDashboard" data-dt-idx="1" tabindex="0">1</a></span><a class="dataTable_pagination next disabled" aria-controls="dataTable-EmployeeDashboard" data-dt-idx="2" tabindex="0" id="dataTable-EmployeeDashboard_next">&gt;</a></div><div class="dataTables_paginate_navigate"><div class="btn btnB01 h30 w80 goPagination"><div class="w50p"><input type="number" min="1" class="form-control"></div><div class="gotoPage w50p h100p grey white-text mrm5 goPaginationButton">GO</div></div></div></div>
+                            </div><!-- activityTab -->
+                      </div>
+        </div><!-- row tabing -->
+      </div><!-- container dashboard-mainContentContainer -->
+    </div><!-- col l9 left side -->
+    <div class="col l3 pad-r-n pad-l-n">
+      <div class="dashboard-outRight">
+        <p class="dashboard-whoOut">Who's On Leave?</p>
+        <div class="bx-wrapper" style="max-width: 200px; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 0px;"><div class="slider3" style="width: auto; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+                        <!-- <div class="slide">
+                <img class="circle dashboard-imgEmployer" src="http://localhost/talenta/web/uploads/avatar/croppedImg_19759.png">
+                <p class="dashboard-outName">Joshua Kevin</p>
+                <p class="dashboard-outDate">1 July - 5 July</p>
+                <div class="clearfix"></div>
+            </div> -->
+
+            <div class="clearfix" style="float: none; list-style: outside none none; position: relative; width: 200px; margin-bottom: 20px;"></div>
+        </div></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev disabled" href="" style="left: 0px;">Prev</a><a class="bx-next disabled" href="" style="right: 0px;">Next</a></div></div></div><!-- Slider 3 -->
+        <div class="row">
+          <a href="/employee/company-calendar" class="white-text">
+            <div class="col l12 center-align pad-20 borderTopWhite">
+            <i class="fa fa-chevron-circle-down"></i> View Calendar
+          </div>
+          </a>
+        </div>
+      </div><!-- dashboard-outRight -->
+      <div class="dashboard-companyStatistic">
+        <div class="row">
+            <div class="input-field col s12">
+              <div class="select-wrapper initialized"><span class="caret"><i class="fa fa-plus"></i></span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-2443bd6e-f6ea-91aa-e2c4-8bc564c60171" value="Employment Status"><ul id="select-options-2443bd6e-f6ea-91aa-e2c4-8bc564c60171" class="dropdown-content select-dropdown "><li class=""><span>Employment Status</span></li><li class=""><span>Gender</span></li><li class=""><span>Religion</span></li><li class=""><span>Education</span></li><li class=""><span>Job Level</span></li><li class=""><span>Length of Service</span></li></ul><select id="selectData" class="initialized">
+                <option value="1">Employment Status</option>
+                <option value="2">Gender</option>
+                <option value="3">Religion</option>
+                <option value="4">Education</option>
+                <option value="5">Job Level</option>
+                <option value="6">Length of Service</option>
+                              </select></div>
+              <label>Status</label>
+            </div>
+            <div class="col s4 left-align">
+              <a id="filterEmployeeModalOpen" class="btn btnB01 mt20 clearfix modal-trigger" href="#modalFilterEmployee">Branch</a>
+            </div>
+            <div class="col s6 left-align">
+              <a id="filterOrganizationModalOpen" class="btn btnB01 mt20 clearfix modal-trigger" href="#modalFilterOrganizationEmployee">Organization</a>
+            </div>
+        </div>
+        <div id="filterDetail" class="row displayNone">
+            <div id="branchName" class="row displayNone left-align">
+            </div>
+            <div id="organizationName" class="row displayNone left-align">
+            </div>
+        </div>
+        <div class="row">
+          <canvas id="companyStatistic" width="200" height="200" style="width: 200px; height: 200px;"></canvas>
+          <div class="dashboard-innerChart">
+              <h5 id="totalCount">22</h5>
+              <span>employees</span>
+          </div>
+          <input type="hidden" id="contract" value="2">
+          <input type="hidden" id="probation" value="1">
+          <input type="hidden" id="permanent" value="19">
+          <div id="legend" class=""><ul class="doughnut-legend"><li class="dashboard-chartLi" style=" padding-left : 0px;"><span class="dashboard-chartLegend" style="background-color:#0A85DC"></span><span class="dashboard-chartValue" style=" min-width : 35px;">2</span>Contract</li><li class="dashboard-chartLi" style=" padding-left : 0px;"><span class="dashboard-chartLegend" style="background-color:#E30F9D"></span><span class="dashboard-chartValue" style=" min-width : 35px;">1</span>Probation</li><li class="dashboard-chartLi" style=" padding-left : 0px;"><span class="dashboard-chartLegend" style="background-color:#91EA06"></span><span class="dashboard-chartValue" style=" min-width : 35px;">19</span>Permanent</li></ul></div>
+        </div>
+      </div>
+    </div><!-- col l3 right side -->
+  </div><!-- row -->
+
+<!-- Modal Filter -->
+<div id="modalFilterEmployee" class="modal modal-fixed-footer w600 h600">
+  <div class="modal-content">
+    <h4 class="titleB01">Filter Branch</h4>
+    <div id="dataTable-employeeFilterDashboard_wrapper" class="dataTables_wrapper no-footer"><div id="dataTable-employeeFilterDashboard_filter" class="dataTables_filter"><div class="input-field col s12 pad-r-n"><input type="search" id="search_dataTable-employeeFilterDashboard" class="" placeholder="" aria-controls="dataTable-employeeFilterDashboard"><label for="search_dataTable-employeeFilterDashboard" class="active">Search</label></div></div><div class="dataTables_length" id="dataTable-employeeFilterDashboard_length"><div class="input-field col s12 pad-l-n"><label class="active">Showing</label> <div class="select-wrapper initialized"><span class="caret"><i class="fa fa-plus"></i></span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-5804cb84-63f5-aed6-f1e6-e9a67c4868ba" value="10"><ul id="select-options-5804cb84-63f5-aed6-f1e6-e9a67c4868ba" class="dropdown-content select-dropdown "><li class=""><span>10</span></li><li class=""><span>25</span></li><li class=""><span>50</span></li><li class=""><span>100</span></li></ul><select name="dataTable-employeeFilterDashboard_length" aria-controls="dataTable-employeeFilterDashboard" class="initialized"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div></div></div><table class="bordered no-footer dataTable" id="dataTable-employeeFilterDashboard" role="grid" aria-describedby="dataTable-employeeFilterDashboard_info">
+      <thead>
+          <tr class="grey lighten-3 bold" role="row"><th class="center-align sorting_disabled" tabindex="0" aria-controls="dataTable-employeeFilterDashboard" rowspan="1" colspan="1" style="width: 0px;" aria-label="
+                
+                
+              ">
+                <input type="checkbox" class="filled-in checkboxHeader" id="checkAll-employeeFilterDashboard">
+                <label for="checkAll-employeeFilterDashboard"></label>
+              </th><th class="center-align sorting_asc" tabindex="0" aria-controls="dataTable-employeeFilterDashboard" rowspan="1" colspan="1" style="width: 0px;" aria-label="Branch: activate to sort column descending" aria-sort="ascending">Branch</th></tr>
+      </thead>
+      <tbody>
+                
+            <tr role="row" class="odd">
+              <td class="center-align">
+                  <input class="filled-in singleComponentCheck" type="checkbox" id="filterBranch_1949" name="Branch[]" value="1949">
+                  <label for="filterBranch_1949"></label>
+              </td>
+              <td class="left-align sorting_1">Jogja</td>
+          </tr><tr role="row" class="even">
+                  <td class="center-align">
+                    <input class="filled-in singleComponentCheck" type="checkbox" id="filterBranch_0" name="Branch[]" value="0">
+                    <label for="filterBranch_0" <="" label="">
+                  </label></td>
+                  <td class="left-align sorting_1">Pusat</td>
+                </tr></tbody>
+    </table><div class="dataTables_info" id="dataTable-employeeFilterDashboard_info" role="status" aria-live="polite">Showing 1 to 2 of 2 entries</div><div class="dataTables_paginate paging_simple_numbers" id="dataTable-employeeFilterDashboard_paginate"><a class="dataTable_pagination previous disabled" aria-controls="dataTable-employeeFilterDashboard" data-dt-idx="0" tabindex="0" id="dataTable-employeeFilterDashboard_previous">&lt;</a><span><a class="dataTable_pagination current" aria-controls="dataTable-employeeFilterDashboard" data-dt-idx="1" tabindex="0">1</a></span><a class="dataTable_pagination next disabled" aria-controls="dataTable-employeeFilterDashboard" data-dt-idx="2" tabindex="0" id="dataTable-employeeFilterDashboard_next">&gt;</a></div><div class="dataTables_paginate_navigate"><div class="btn btnB01 h30 w80 goPagination"><div class="w50p"><input type="number" min="1" class="form-control"></div><div class="gotoPage w50p h100p grey white-text mrm5 goPaginationButton">GO</div></div></div></div>
+
+
+  </div>
+    <div class="modal-footer fix1">
+    <a class="btn btnB01 modal-close modal-action">Cancel</a>
+    <a class="btn btnB01 mr5" id="createFilter">Confirm</a>
+  </div>
+</div>
+<!-- Modal Filter -->
+
+<!-- Modal Filter Organization-->
+<div id="modalFilterOrganizationEmployee" class="modal modal-fixed-footer w600 h600">
+  <div class="modal-content">
+    <h4 class="titleB01">Filter Organization</h4>
+    <div id="dataTable-organizationDashboard_wrapper" class="dataTables_wrapper no-footer"><div id="dataTable-organizationDashboard_filter" class="dataTables_filter"><div class="input-field col s12 pad-r-n"><input type="search" id="search_dataTable-organizationDashboard" class="" placeholder="" aria-controls="dataTable-organizationDashboard"><label for="search_dataTable-organizationDashboard" class="active">Search</label></div></div><div class="dataTables_length" id="dataTable-organizationDashboard_length"><div class="input-field col s12 pad-l-n"><label class="active">Showing</label> <div class="select-wrapper initialized"><span class="caret"><i class="fa fa-plus"></i></span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-49e23f1e-5177-af25-9ba3-1fbfdf9eafe2" value="10"><ul id="select-options-49e23f1e-5177-af25-9ba3-1fbfdf9eafe2" class="dropdown-content select-dropdown "><li class=""><span>10</span></li><li class=""><span>25</span></li><li class=""><span>50</span></li><li class=""><span>100</span></li></ul><select name="dataTable-organizationDashboard_length" aria-controls="dataTable-organizationDashboard" class="initialized"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div></div></div><table class="bordered no-footer dataTable" id="dataTable-organizationDashboard" role="grid" aria-describedby="dataTable-organizationDashboard_info">
+      <thead>
+          <tr class="grey lighten-3 bold" role="row"><th class="center-align sorting_disabled" tabindex="0" aria-controls="dataTable-organizationDashboard" rowspan="1" colspan="1" style="width: 0px;" aria-label="
+                
+                
+              ">
+                <input type="checkbox" class="filled-in checkboxHeader" id="checkAll-organizationFilterDashboard">
+                <label for="checkAll-organizationFilterDashboard"></label>
+              </th><th class="center-align sorting_asc" tabindex="0" aria-controls="dataTable-organizationDashboard" rowspan="1" colspan="1" style="width: 0px;" aria-label="Organization: activate to sort column descending" aria-sort="ascending">Organization</th></tr>
+      </thead>
+      <tbody>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            <tr role="row" class="odd">
+              <td class="center-align">
+                  <input class="filled-in singleComponentCheck" type="checkbox" id="filterLowerOrg_13477" name="Organization[]" value="13477">
+                  <label for="filterLowerOrg_13477"></label>
+              </td>
+              <td class="left-align sorting_1">Accounting</td>
+          </tr><tr role="row" class="even">
+              <td class="center-align">
+                  <input class="filled-in singleComponentCheck" type="checkbox" id="filterLowerOrg_13471" name="Organization[]" value="13471">
+                  <label for="filterLowerOrg_13471"></label>
+              </td>
+              <td class="left-align sorting_1">BOD</td>
+          </tr><tr role="row" class="odd">
+              <td class="center-align">
+                  <input class="filled-in singleComponentCheck" type="checkbox" id="filterLowerOrg_13476" name="Organization[]" value="13476">
+                  <label for="filterLowerOrg_13476"></label>
+              </td>
+              <td class="left-align sorting_1">Finance</td>
+          </tr><tr role="row" class="even">
+              <td class="center-align">
+                  <input class="filled-in singleComponentCheck" type="checkbox" id="filterLowerOrg_13475" name="Organization[]" value="13475">
+                  <label for="filterLowerOrg_13475"></label>
+              </td>
+              <td class="left-align sorting_1">Finance &amp; Accounting</td>
+          </tr><tr role="row" class="odd">
+              <td class="center-align">
+                  <input class="filled-in singleComponentCheck" type="checkbox" id="filterLowerOrg_13474" name="Organization[]" value="13474">
+                  <label for="filterLowerOrg_13474"></label>
+              </td>
+              <td class="left-align sorting_1">GA</td>
+          </tr><tr role="row" class="even">
+              <td class="center-align">
+                  <input class="filled-in singleComponentCheck" type="checkbox" id="filterLowerOrg_13473" name="Organization[]" value="13473">
+                  <label for="filterLowerOrg_13473"></label>
+              </td>
+              <td class="left-align sorting_1">HRD</td>
+          </tr><tr role="row" class="odd">
+              <td class="center-align">
+                  <input class="filled-in singleComponentCheck" type="checkbox" id="filterLowerOrg_13472" name="Organization[]" value="13472">
+                  <label for="filterLowerOrg_13472"></label>
+              </td>
+              <td class="left-align sorting_1">HRD &amp; GA</td>
+          </tr><tr role="row" class="even">
+              <td class="center-align">
+                  <input class="filled-in singleComponentCheck" type="checkbox" id="filterLowerOrg_17153" name="Organization[]" value="17153">
+                  <label for="filterLowerOrg_17153"></label>
+              </td>
+              <td class="left-align sorting_1">Human hire</td>
+          </tr><tr role="row" class="odd">
+              <td class="center-align">
+                  <input class="filled-in singleComponentCheck" type="checkbox" id="filterLowerOrg_17151" name="Organization[]" value="17151">
+                  <label for="filterLowerOrg_17151"></label>
+              </td>
+              <td class="left-align sorting_1">Human resource</td>
+          </tr><tr role="row" class="even">
+              <td class="center-align">
+                  <input class="filled-in singleComponentCheck" type="checkbox" id="filterLowerOrg_17152" name="Organization[]" value="17152">
+                  <label for="filterLowerOrg_17152"></label>
+              </td>
+              <td class="left-align sorting_1">Human skill</td>
+          </tr></tbody>
+    </table><div class="dataTables_info" id="dataTable-organizationDashboard_info" role="status" aria-live="polite">Showing 1 to 10 of 14 entries</div><div class="dataTables_paginate paging_simple_numbers" id="dataTable-organizationDashboard_paginate"><a class="dataTable_pagination previous disabled" aria-controls="dataTable-organizationDashboard" data-dt-idx="0" tabindex="0" id="dataTable-organizationDashboard_previous">&lt;</a><span><a class="dataTable_pagination current" aria-controls="dataTable-organizationDashboard" data-dt-idx="1" tabindex="0">1</a><a class="dataTable_pagination " aria-controls="dataTable-organizationDashboard" data-dt-idx="2" tabindex="0">2</a></span><a class="dataTable_pagination next" aria-controls="dataTable-organizationDashboard" data-dt-idx="3" tabindex="0" id="dataTable-organizationDashboard_next">&gt;</a></div><div class="dataTables_paginate_navigate"><div class="btn btnB01 h30 w80 goPagination"><div class="w50p"><input type="number" min="1" class="form-control"></div><div class="gotoPage w50p h100p grey white-text mrm5 goPaginationButton">GO</div></div></div></div>
+  </div>
+    <div class="modal-footer fix1">
+    <a class="btn btnB01 modal-close modal-action">Cancel</a>
+    <a class="btn btnB01 mr5" id="createFilterOrganization">Confirm</a>
+  </div>
+</div>
+<!-- Modal Filter Organization -->
+
+
+<!-- Modal Task -->
+<div id="modalTask" class="modal modal-fixed-footer">
+  <div class="modal-content">
+    <h4 class="titleB01">Add Task</h4>
+    <div class="row ml-075r mr-075r">
+      <form id="crt-tasks-form" action="/employee/dashboard" method="post">
+<input type="hidden" name="_csrf" value="4FvMAP6QOQIgt1zaiOpQ2wNC2G2esGrzEm81kXiQkui5Lp9BufxpYEbhZa2_kxnrexGaD9qIUqt-OkH_VcWkoQ==">      <div class="row">
+          <div class="input-field col l12 field-tasks-assigned_to">
+<div class="select-wrapper form-control initialized"><span class="caret"><i class="fa fa-plus"></i></span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-43456994-db95-6007-72a2-66535355bd00" value="--Select Employee--"><ul id="select-options-43456994-db95-6007-72a2-66535355bd00" class="dropdown-content select-dropdown "><div class="select-search-wrapper"><input type="text" placeholder="Search.."></div><li class=""><span>--Select Employee--</span></li><li class=""><span>KPI02-Novi Demo</span></li><li class=""><span>KPI03-Marcelo Demo</span></li><li class=""><span>KPI04-Sergio Ramos</span></li><li class=""><span>KPI05-Made Demo</span></li><li class=""><span>NS-002-Cristiano Demo</span></li><li class=""><span>15441-employe sample</span></li><li class=""><span>9987-Zilong Raf</span></li><li class=""><span>kk09-lisa tests </span></li><li class=""><span>TDI988-Andika cara</span></li><li class=""><span>TDI981-narnia cara</span></li><li class=""><span>TDI982-narendra cara</span></li><li class=""><span>TDI983-Handora cara</span></li><li class=""><span>TDI984-Riyan cara</span></li><li class=""><span>TDI985-Andi cara</span></li><li class=""><span>TDI986-Dian cara</span></li><li class=""><span>TDI987-Teri cara</span></li><li class=""><span>TDI9890-Fina cara</span></li><li class=""><span>DKI1234-clarissa carisa</span></li><li class=""><span>Data123-clarissa carisa</span></li><li class=""><span>Data1234-clarissa carisa</span></li><li class=""><span>Data034-clarissa carisa</span></li><li class=""><span>Data035-clarissa carisa</span></li></ul><select id="tasks-assigned_to" class="form-control initialized" name="Tasks[assigned_to]">
+<option value="">--Select Employee--</option>
+<option value="61276">KPI02-Novi Demo</option>
+<option value="61277">KPI03-Marcelo Demo</option>
+<option value="61280">KPI04-Sergio Ramos</option>
+<option value="61283">KPI05-Made Demo</option>
+<option value="73470">NS-002-Cristiano Demo</option>
+<option value="82310">15441-employe sample</option>
+<option value="83495">9987-Zilong Raf</option>
+<option value="94005">kk09-lisa tests </option>
+<option value="98596">TDI988-Andika cara</option>
+<option value="98597">TDI981-narnia cara</option>
+<option value="98599">TDI982-narendra cara</option>
+<option value="98600">TDI983-Handora cara</option>
+<option value="98788">TDI984-Riyan cara</option>
+<option value="98789">TDI985-Andi cara</option>
+<option value="98791">TDI986-Dian cara</option>
+<option value="98792">TDI987-Teri cara</option>
+<option value="98793">TDI9890-Fina cara</option>
+<option value="99658">DKI1234-clarissa carisa</option>
+<option value="99659">Data123-clarissa carisa</option>
+<option value="99660">Data1234-clarissa carisa</option>
+<option value="99661">Data034-clarissa carisa</option>
+<option value="99662">Data035-clarissa carisa</option>
+</select></div><label class="control-label" for="tasks-assigned_to">Assign To</label>
+</div>      </div>
+      <div class="row">
+        <div class="input-field col l12">
+          <div class="form-group field-tasks-title">
+<label class="control-label" for="tasks-title">Title</label>
+<input type="text" id="tasks-title" class="form-control" name="Tasks[title]">
+
+<div class="help-block"></div>
+</div>        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col l12">
+          <div class="form-group field-tasks-deadline">
+<label class="control-label" for="tasks-deadline">Deadline</label>
+<input type="text" id="tasks-deadline" class="datepicker picker__input" name="Tasks[deadline]" value="" readonly="" tabindex="-1" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="tasks-deadline_root"><div class="picker" id="tasks-deadline_root" tabindex="0" aria-hidden="true"><div class="picker__holder"><div class="picker__frame"><div class="picker__wrap"><div class="picker__box"><div class="picker__date-display"><div class="picker__weekday-display">Sunday</div><div class="picker__month-display"><div>Feb</div></div><div class="picker__day-display"><div>10</div></div><div class="picker__year-display"><div>2019</div></div></div><div class="picker__calendar-container"><div class="picker__header"><select class="picker__select--month browser-default" disabled="" aria-controls="tasks-deadline_table" title="Select a month"><option value="0">January</option><option value="1" selected="">February</option><option value="2">March</option><option value="3">April</option><option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option><option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option></select><select class="picker__select--year browser-default" disabled="" aria-controls="tasks-deadline_table" title="Select a year"><option value="1900">1900</option><option value="1901">1901</option><option value="1902">1902</option><option value="1903">1903</option><option value="1904">1904</option><option value="1905">1905</option><option value="1906">1906</option><option value="1907">1907</option><option value="1908">1908</option><option value="1909">1909</option><option value="1910">1910</option><option value="1911">1911</option><option value="1912">1912</option><option value="1913">1913</option><option value="1914">1914</option><option value="1915">1915</option><option value="1916">1916</option><option value="1917">1917</option><option value="1918">1918</option><option value="1919">1919</option><option value="1920">1920</option><option value="1921">1921</option><option value="1922">1922</option><option value="1923">1923</option><option value="1924">1924</option><option value="1925">1925</option><option value="1926">1926</option><option value="1927">1927</option><option value="1928">1928</option><option value="1929">1929</option><option value="1930">1930</option><option value="1931">1931</option><option value="1932">1932</option><option value="1933">1933</option><option value="1934">1934</option><option value="1935">1935</option><option value="1936">1936</option><option value="1937">1937</option><option value="1938">1938</option><option value="1939">1939</option><option value="1940">1940</option><option value="1941">1941</option><option value="1942">1942</option><option value="1943">1943</option><option value="1944">1944</option><option value="1945">1945</option><option value="1946">1946</option><option value="1947">1947</option><option value="1948">1948</option><option value="1949">1949</option><option value="1950">1950</option><option value="1951">1951</option><option value="1952">1952</option><option value="1953">1953</option><option value="1954">1954</option><option value="1955">1955</option><option value="1956">1956</option><option value="1957">1957</option><option value="1958">1958</option><option value="1959">1959</option><option value="1960">1960</option><option value="1961">1961</option><option value="1962">1962</option><option value="1963">1963</option><option value="1964">1964</option><option value="1965">1965</option><option value="1966">1966</option><option value="1967">1967</option><option value="1968">1968</option><option value="1969">1969</option><option value="1970">1970</option><option value="1971">1971</option><option value="1972">1972</option><option value="1973">1973</option><option value="1974">1974</option><option value="1975">1975</option><option value="1976">1976</option><option value="1977">1977</option><option value="1978">1978</option><option value="1979">1979</option><option value="1980">1980</option><option value="1981">1981</option><option value="1982">1982</option><option value="1983">1983</option><option value="1984">1984</option><option value="1985">1985</option><option value="1986">1986</option><option value="1987">1987</option><option value="1988">1988</option><option value="1989">1989</option><option value="1990">1990</option><option value="1991">1991</option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019" selected="">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option><option value="2032">2032</option><option value="2033">2033</option><option value="2034">2034</option><option value="2035">2035</option><option value="2036">2036</option><option value="2037">2037</option></select><div class="picker__nav--prev" data-nav="-1" role="button" aria-controls="tasks-deadline_table" title="Previous month"> </div><div class="picker__nav--next" data-nav="1" role="button" aria-controls="tasks-deadline_table" title="Next month"> </div></div><table class="picker__table" id="tasks-deadline_table" role="grid" aria-controls="tasks-deadline" aria-readonly="true"><thead><tr><th class="picker__weekday" scope="col" title="Sunday">S</th><th class="picker__weekday" scope="col" title="Monday">M</th><th class="picker__weekday" scope="col" title="Tuesday">T</th><th class="picker__weekday" scope="col" title="Wednesday">W</th><th class="picker__weekday" scope="col" title="Thursday">T</th><th class="picker__weekday" scope="col" title="Friday">F</th><th class="picker__weekday" scope="col" title="Saturday">S</th></tr></thead><tbody><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548522000000" role="gridcell" aria-label="27 January, 2019">27</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548608400000" role="gridcell" aria-label="28 January, 2019">28</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548694800000" role="gridcell" aria-label="29 January, 2019">29</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548781200000" role="gridcell" aria-label="30 January, 2019">30</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548867600000" role="gridcell" aria-label="31 January, 2019">31</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1548954000000" role="gridcell" aria-label="1 February, 2019">1</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549040400000" role="gridcell" aria-label="2 February, 2019">2</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549126800000" role="gridcell" aria-label="3 February, 2019">3</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549213200000" role="gridcell" aria-label="4 February, 2019">4</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549299600000" role="gridcell" aria-label="5 February, 2019">5</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549386000000" role="gridcell" aria-label="6 February, 2019">6</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549472400000" role="gridcell" aria-label="7 February, 2019">7</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549558800000" role="gridcell" aria-label="8 February, 2019">8</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549645200000" role="gridcell" aria-label="9 February, 2019">9</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus picker__day--today picker__day--highlighted" data-pick="1549731600000" role="gridcell" aria-label="10 February, 2019" aria-activedescendant="true">10</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549818000000" role="gridcell" aria-label="11 February, 2019">11</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549904400000" role="gridcell" aria-label="12 February, 2019">12</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549990800000" role="gridcell" aria-label="13 February, 2019">13</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550077200000" role="gridcell" aria-label="14 February, 2019">14</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550163600000" role="gridcell" aria-label="15 February, 2019">15</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550250000000" role="gridcell" aria-label="16 February, 2019">16</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550336400000" role="gridcell" aria-label="17 February, 2019">17</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550422800000" role="gridcell" aria-label="18 February, 2019">18</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550509200000" role="gridcell" aria-label="19 February, 2019">19</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550595600000" role="gridcell" aria-label="20 February, 2019">20</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550682000000" role="gridcell" aria-label="21 February, 2019">21</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550768400000" role="gridcell" aria-label="22 February, 2019">22</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550854800000" role="gridcell" aria-label="23 February, 2019">23</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550941200000" role="gridcell" aria-label="24 February, 2019">24</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1551027600000" role="gridcell" aria-label="25 February, 2019">25</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1551114000000" role="gridcell" aria-label="26 February, 2019">26</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1551200400000" role="gridcell" aria-label="27 February, 2019">27</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1551286800000" role="gridcell" aria-label="28 February, 2019">28</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551373200000" role="gridcell" aria-label="1 March, 2019">1</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551459600000" role="gridcell" aria-label="2 March, 2019">2</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551546000000" role="gridcell" aria-label="3 March, 2019">3</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551632400000" role="gridcell" aria-label="4 March, 2019">4</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551718800000" role="gridcell" aria-label="5 March, 2019">5</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551805200000" role="gridcell" aria-label="6 March, 2019">6</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551891600000" role="gridcell" aria-label="7 March, 2019">7</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551978000000" role="gridcell" aria-label="8 March, 2019">8</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1552064400000" role="gridcell" aria-label="9 March, 2019">9</div></td></tr></tbody></table></div><div class="picker__footer"><button class="btn-flat picker__today" type="button" data-pick="1549731600000" disabled="" aria-controls="tasks-deadline">Today</button><button class="btn-flat picker__clear" type="button" data-clear="1" disabled="" aria-controls="tasks-deadline">Clear</button><button class="btn-flat picker__close" type="button" data-close="true" disabled="" aria-controls="tasks-deadline">Select</button></div></div></div></div></div></div><input type="hidden" name="Tasks[deadline]_submit">
+
+<div class="help-block"></div>
+</div>        </div>
+      </div><!-- row -->
+      <div class="row">
+        <div class="input-field col l12 field-tasks-description">
+<textarea id="tasks-description" class="materialize-textarea" name="Tasks[description]" maxlength="100" rows="3"></textarea><label class="control-label" for="tasks-description">Description</label>
+</div>      </div>
+      <div class="row">
+        <div class="input-field col l6">
+          <a href="#!" class="btn btnB01 w70p mr5" id="openAttachFileModal">Attach File</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col l12">
+          <input type="checkbox" class="filled-in" name="Tasks[sendEmailTask]" value="1" id="sendemailTask">
+          <label for="sendemailTask">Send to Email</label>
+        </div>
+      </div>
+    </form></div>
+  </div>
+  <div class="modal-footer fix1">
+    <a class="btn btnB01 modal-close modal-action">Cancel</a>
+    <a class="btn btnB01 mr5" id="createTask">Create Task</a>
+  </div>
+  <input type="hidden" id="urlSaver" value="/tasks/ajax-create-tasks">
+  </div>
+
+<!--Attach File Modal-->
+<div id="attachFileModal" class="modal modal-fixed-footer" style="max-height:100%">
+  <div class="modal-content">
+    <h4 class="titleB01">Add Task File</h4>
+    <form id="formAddTaskFile" class="" method="POST">
+      <div id="tableTaskFile" class="new-task-attach">
+        <div class="row taskRow">
+          <div class="col s12 m6 l6">
+            <a href="#!" class="btn btnB01 w30p mr5 attachTaskFile">Browse</a>
+            <a href="#!" class="btn btnB01 w10p mr5 addTaskFile">+</a>
+            <a href="#!" class="btn btnB01 w10p mr5 removeTaskFile">-</a>
+            <input type="hidden" class="task-filename" name="dataFile" value="">
+          </div>
+          <div class="col s12 m6 l6 pad-t-10">
+            <label>Filename : </label><label class="filenameTask"></label>
+          </div>
+        </div>
+      </div>
+      </form>
+      <div class="displayNone">
+          
+<span class="btn btn-success fileinput-button">
+   <i class="glyphicon glyphicon-plus"></i>
+   <span>Select file...</span>
+   <!-- The file input field used as target for the file upload widget -->
+    <input type="hidden" name="Adjustment[import_task_file]" value=""><input type="file" id="adjustment-import_task_file" name="Adjustment[import_task_file]" data-url="/tasks/upload-task-file"></span>
+        </div>
+  </div>
+  <div class="modal-footer fix1">
+    <a href="#!" class=" modal-action modal-close btn btnB01">OK</a>
+  </div>
+</div><!--End Attach File Modal-->
+
+
+
+<!-- Modal Announcement -->
+<div id="modalAnnouncement" class="modal modal-fixed-footer">
+  <div class="modal-content">
+          <h4 class="titleB01">Add Announcement</h4>
+      <form id="crt-announcement-form" action="/employee/dashboard" method="post">
+<input type="hidden" name="_csrf" value="4FvMAP6QOQIgt1zaiOpQ2wNC2G2esGrzEm81kXiQkui5Lp9BufxpYEbhZa2_kxnrexGaD9qIUqt-OkH_VcWkoQ==">        <div class="row">
+      <div class="input-field col s12">
+        <div class="form-group field-announcement-subject">
+<label class="control-label" for="announcement-subject">Subject</label>
+<input type="text" id="announcement-subject" class="form-control" name="Announcement[subject]">
+
+<div class="help-block"></div>
+</div>        <div class="form-group field-announcement-id">
+<label class="control-label" for="announcement-id"></label>
+<input type="hidden" id="announcement-id" class="form-control" name="Announcement[id]">
+
+<div class="help-block"></div>
+</div>      </div>
+    </div>
+    <div class="row">
+      <label for="announcement-content" class="f14" style="padding-left:10px;">Content</label>
+      <div class="input-field col s12">
+        <div class="form-group field-announcement-content">
+
+<div id="mceu_11" class="mce-tinymce mce-container mce-panel" hidefocus="1" tabindex="-1" role="application" style="visibility: hidden; border-width: 1px; width: 100%;"><div id="mceu_11-body" class="mce-container-body mce-stack-layout"><div id="mceu_12" class="mce-top-part mce-container mce-stack-layout-item mce-first"><div id="mceu_12-body" class="mce-container-body"><div id="mceu_13" class="mce-container mce-menubar mce-toolbar mce-first" role="menubar" style="border-width: 0px 0px 1px;"><div id="mceu_13-body" class="mce-container-body mce-flow-layout"><div id="mceu_14" class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-first mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_14" role="menuitem" aria-haspopup="true"><button id="mceu_14-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">File</span> <i class="mce-caret"></i></button></div><div id="mceu_15" class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_15" role="menuitem" aria-haspopup="true"><button id="mceu_15-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">Edit</span> <i class="mce-caret"></i></button></div><div id="mceu_16" class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_16" role="menuitem" aria-haspopup="true"><button id="mceu_16-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">View</span> <i class="mce-caret"></i></button></div><div id="mceu_17" class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-last mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_17" role="menuitem" aria-haspopup="true"><button id="mceu_17-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">Format</span> <i class="mce-caret"></i></button></div></div></div><div id="mceu_18" class="mce-toolbar-grp mce-container mce-panel mce-last" hidefocus="1" tabindex="-1" role="group"><div id="mceu_18-body" class="mce-container-body mce-stack-layout"><div id="mceu_19" class="mce-container mce-toolbar mce-stack-layout-item mce-first mce-last" role="toolbar"><div id="mceu_19-body" class="mce-container-body mce-flow-layout"><div id="mceu_20" class="mce-container mce-flow-layout-item mce-first mce-btn-group" role="group"><div id="mceu_20-body"><div id="mceu_0" class="mce-widget mce-btn mce-first mce-disabled" tabindex="-1" role="button" aria-label="Undo" aria-disabled="true"><button id="mceu_0-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-undo"></i></button></div><div id="mceu_1" class="mce-widget mce-btn mce-last mce-disabled" tabindex="-1" role="button" aria-label="Redo" aria-disabled="true"><button id="mceu_1-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-redo"></i></button></div></div></div><div id="mceu_21" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_21-body"><div id="mceu_2" class="mce-widget mce-btn mce-menubtn mce-first mce-last mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_2" role="button" aria-haspopup="true"><button id="mceu_2-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">Formats</span> <i class="mce-caret"></i></button></div></div></div><div id="mceu_22" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_22-body"><div id="mceu_3" class="mce-widget mce-btn mce-first" tabindex="-1" aria-pressed="false" role="button" aria-label="Bold"><button id="mceu_3-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bold"></i></button></div><div id="mceu_4" class="mce-widget mce-btn mce-last" tabindex="-1" aria-pressed="false" role="button" aria-label="Italic"><button id="mceu_4-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-italic"></i></button></div></div></div><div id="mceu_23" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_23-body"><div id="mceu_5" class="mce-widget mce-btn mce-first" tabindex="-1" aria-pressed="false" role="button" aria-label="Align left"><button id="mceu_5-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignleft"></i></button></div><div id="mceu_6" class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Align center"><button id="mceu_6-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-aligncenter"></i></button></div><div id="mceu_7" class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Align right"><button id="mceu_7-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignright"></i></button></div><div id="mceu_8" class="mce-widget mce-btn mce-last" tabindex="-1" aria-pressed="false" role="button" aria-label="Justify"><button id="mceu_8-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignjustify"></i></button></div></div></div><div id="mceu_24" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_24-body"><div id="mceu_9" class="mce-widget mce-btn mce-first" tabindex="-1" role="button" aria-label="Decrease indent"><button id="mceu_9-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-outdent"></i></button></div><div id="mceu_10" class="mce-widget mce-btn mce-last" tabindex="-1" role="button" aria-label="Increase indent"><button id="mceu_10-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-indent"></i></button></div></div></div><div id="mceu_25" class="mce-container mce-flow-layout-item mce-last mce-btn-group" role="group"><div id="mceu_25-body"></div></div></div></div></div></div></div></div><div id="mceu_26" class="mce-edit-area mce-container mce-panel mce-stack-layout-item" hidefocus="1" tabindex="-1" role="group" style="border-width: 1px 0px 0px;"><iframe id="announcement-content_ifr" allowtransparency="true" title="Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press ALT-0 for help" style="width: 100%; height: 100px; display: block;" frameborder="0"></iframe></div><div id="mceu_27" class="mce-statusbar mce-container mce-panel mce-stack-layout-item mce-last" hidefocus="1" tabindex="-1" role="group" style="border-width: 1px 0px 0px;"><div id="mceu_27-body" class="mce-container-body mce-flow-layout"><div id="mceu_28" class="mce-path mce-flow-layout-item mce-first"><div class="mce-path-item">&nbsp;</div></div><div id="mceu_29" class="mce-flow-layout-item mce-resizehandle"><i class="mce-ico mce-i-resize"></i></div><span id="mceu_30" class="mce-branding mce-widget mce-label mce-flow-layout-item mce-last"> Powered by <a href="https://www.tinymce.com/?utm_campaign=editor_referral&amp;utm_medium=poweredby&amp;utm_source=tinymce" rel="noopener" target="_blank" role="presentation" tabindex="-1">tinymce</a></span></div></div></div></div><textarea id="announcement-content" name="Announcement[content]" rows="6" style="display: none;" aria-hidden="true"></textarea>
+
+<div class="help-block"></div>
+</div>      </div>
+      <div class="row">
+        <div class="col s12">
+          <a href="#modalUploadFile" class="btn btnB01  modal-trigger">Upload File</a>
+          <div id="listUploadFile"> 
+                 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s8">
+        <input type="checkbox" class="filled-in" name="Announcement[sendEmail]" value="1" id="sendemail">
+        <label for="sendemail">Send to Email</label>
+      </div>
+    </div>
+
+    <div class="row mt20 mb10">
+      <div class="col l6">
+        <a class="btn btnB01 modal-trigger" href="#modalDepartment" data-target="modalDepartment"><i class="fa fa-filter left mtm3"></i><span class="left">Filter by Organization</span></a>
+      </div>
+      <div class="col l6">
+        <a class="btn btnB01 modal-trigger" href="#modalBranch" data-target="modalBranch"><i class="fa fa-filter left mtm3"></i><span class="left">Filter by Branch</span></a>
+      </div>
+    </div>
+
+    <div class="row mt20">
+        <input type="hidden" id="organizationFilterId" name="organizationFilterBank" value="">
+        <span id="organizationFilterBankLabel">
+        </span>
+    </div>
+
+    <div class="row mt20">
+      <input type="hidden" id="branchFilterId" name="branchFilterBank" value="">
+      <span id="branchFilterBankLabel">
+      </span>
+    </div>
+                      
+  </form></div>
+
+  <div class="modal-footer fix1">
+    <a class="btn btnB01 modal-close modal-action">Cancel</a>
+           <a class="btn btnB01 mr5" id="crt-announcement">Create Announcement</a>
+      </div>
+  </div>
+
+<!-- Modal Branch -->
+<div id="modalBranch" class="modal modal-fixed-footer w600 h600">
+    <div class="modal-content">
+        <h4 class="titleB01">Branch</h4>
+        <div id="dataTable-branch-filter_wrapper" class="dataTables_wrapper no-footer"><div id="dataTable-branch-filter_filter" class="dataTables_filter"><div class="input-field col s12 pad-r-n"><input type="search" id="search_dataTable-branch-filter" class="" placeholder="" aria-controls="dataTable-branch-filter"><label for="search_dataTable-branch-filter" class="active">Search</label></div></div><div class="dataTables_length" id="dataTable-branch-filter_length"><div class="input-field col s12 pad-l-n"><label class="active">Showing</label> <div class="select-wrapper initialized"><span class="caret"><i class="fa fa-plus"></i></span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-fb1add1b-b977-e451-d8ca-fa06efabb612" value="10"><ul id="select-options-fb1add1b-b977-e451-d8ca-fa06efabb612" class="dropdown-content select-dropdown "><li class=""><span>10</span></li><li class=""><span>25</span></li><li class=""><span>50</span></li><li class=""><span>100</span></li></ul><select name="dataTable-branch-filter_length" aria-controls="dataTable-branch-filter" class="initialized"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div></div></div><table class="bordered no-footer dataTable" id="dataTable-branch-filter" role="grid" aria-describedby="dataTable-branch-filter_info">
+                <thead>
+                    <tr class="grey lighten-3 bold" role="row"><th class="center-align sorting_disabled" tabindex="0" aria-controls="dataTable-branch-filter" rowspan="1" colspan="1" style="width: 0px;" aria-label="
+                        
+                        
+                        ">
+                        <input type="checkbox" class="filled-in checkboxHeader" id="checkAll-branch">
+                        <label for="checkAll-branch"></label>
+                        </th><th class="sorting_asc" tabindex="0" aria-controls="dataTable-branch-filter" rowspan="1" colspan="1" style="width: 0px;" aria-label="Branch: activate to sort column descending" aria-sort="ascending">Branch</th></tr>
+                </thead>
+                <tbody>
+                  
+                                    
+                                <tr role="row" class="odd">
+                        <td class="center-align">
+                            <input class="filled-in singleBranchCheck" type="checkbox" name="listEmployee" data-name="Jogja" data-id="1949" id="branch-1949">
+                            <label for="branch-1949"></label>
+                        </td>
+                        <td class="sorting_1">Jogja</td>
+                    </tr><tr role="row" class="even">
+                    <td class="center-align">
+                      <input class="filled-in singleBranchCheck" type="checkbox" name="listEmployee" data-name="Pusat" data-id="HQ" id="branch-HQ">
+                      <label for="branch-HQ"></label>
+                    </td>
+                    <td class="sorting_1">Pusat</td>
+                  </tr></tbody>
+        </table><div class="dataTables_info" id="dataTable-branch-filter_info" role="status" aria-live="polite">Showing 1 to 2 of 2 entries</div><div class="dataTables_paginate paging_simple_numbers" id="dataTable-branch-filter_paginate"><a class="dataTable_pagination previous disabled" aria-controls="dataTable-branch-filter" data-dt-idx="0" tabindex="0" id="dataTable-branch-filter_previous">&lt;</a><span><a class="dataTable_pagination current" aria-controls="dataTable-branch-filter" data-dt-idx="1" tabindex="0">1</a></span><a class="dataTable_pagination next disabled" aria-controls="dataTable-branch-filter" data-dt-idx="2" tabindex="0" id="dataTable-branch-filter_next">&gt;</a></div><div class="dataTables_paginate_navigate"><div class="btn btnB01 h30 w80 goPagination"><div class="w50p"><input type="number" min="1" class="form-control"></div><div class="gotoPage w50p h100p grey white-text mrm5 goPaginationButton">GO</div></div></div></div>
+    </div>
+    <div class="modal-footer fix1">
+        <a href="#" class="modal-action modal-close btn btnB01 right" id="btnBranchBankClear">Clear</a>
+        <a href="#" class="modal-action modal-close btn btnB01 right mr5" id="btnBranchBankConfirm">Filter</a>
+    </div>
+</div>
+<!-- Modal Branch -->
+
+<!-- Modal Department -->
+<div id="modalDepartment" class="modal modal-fixed-footer w600 h600">
+    <div class="modal-content">
+      <h4 class="titleB01">Organization</h4>
+      <div id="dataTable-organization-filter_wrapper" class="dataTables_wrapper no-footer"><div id="dataTable-organization-filter_filter" class="dataTables_filter"><div class="input-field col s12 pad-r-n"><input type="search" id="search_dataTable-organization-filter" class="" placeholder="" aria-controls="dataTable-organization-filter"><label for="search_dataTable-organization-filter" class="active">Search</label></div></div><div class="dataTables_length" id="dataTable-organization-filter_length"><div class="input-field col s12 pad-l-n"><label class="active">Showing</label> <div class="select-wrapper initialized"><span class="caret"><i class="fa fa-plus"></i></span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-c3e06334-bbae-cd63-c990-1097381493b3" value="10"><ul id="select-options-c3e06334-bbae-cd63-c990-1097381493b3" class="dropdown-content select-dropdown "><li class=""><span>10</span></li><li class=""><span>25</span></li><li class=""><span>50</span></li><li class=""><span>100</span></li></ul><select name="dataTable-organization-filter_length" aria-controls="dataTable-organization-filter" class="initialized"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></div></div></div><table class="bordered no-footer dataTable" id="dataTable-organization-filter" role="grid" aria-describedby="dataTable-organization-filter_info">
+              <thead>
+                  <tr class="grey lighten-3 bold" role="row"><th class="center-align sorting_disabled" tabindex="0" aria-controls="dataTable-organization-filter" rowspan="1" colspan="1" style="width: 0px;" aria-label="
+                      
+                      
+                      ">
+                      <input type="checkbox" class="filled-in checkboxHeader" id="checkAll-organization">
+                      <label for="checkAll-organization"></label>
+                      </th><th class="sorting_asc" tabindex="0" aria-controls="dataTable-organization-filter" rowspan="1" colspan="1" style="width: 0px;" aria-label="Organization: activate to sort column descending" aria-sort="ascending">Organization</th></tr>
+              </thead>
+              <tbody>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                            <tr role="row" class="odd">
+                      <td class="center-align">
+                          <input class="filled-in singleOrganizationCheck" type="checkbox" name="listEmployee" data-name="Accounting" data-id="13477" id="org-13477">
+                          <label for="org-13477"></label>
+                      </td>
+                      <td class="sorting_1">Accounting</td>
+                  </tr><tr role="row" class="even">
+                      <td class="center-align">
+                          <input class="filled-in singleOrganizationCheck" type="checkbox" name="listEmployee" data-name="BOD" data-id="13471" id="org-13471">
+                          <label for="org-13471"></label>
+                      </td>
+                      <td class="sorting_1">BOD</td>
+                  </tr><tr role="row" class="odd">
+                      <td class="center-align">
+                          <input class="filled-in singleOrganizationCheck" type="checkbox" name="listEmployee" data-name="Finance" data-id="13476" id="org-13476">
+                          <label for="org-13476"></label>
+                      </td>
+                      <td class="sorting_1">Finance</td>
+                  </tr><tr role="row" class="even">
+                      <td class="center-align">
+                          <input class="filled-in singleOrganizationCheck" type="checkbox" name="listEmployee" data-name="Finance &amp; Accounting" data-id="13475" id="org-13475">
+                          <label for="org-13475"></label>
+                      </td>
+                      <td class="sorting_1">Finance &amp; Accounting</td>
+                  </tr><tr role="row" class="odd">
+                      <td class="center-align">
+                          <input class="filled-in singleOrganizationCheck" type="checkbox" name="listEmployee" data-name="GA" data-id="13474" id="org-13474">
+                          <label for="org-13474"></label>
+                      </td>
+                      <td class="sorting_1">GA</td>
+                  </tr><tr role="row" class="even">
+                      <td class="center-align">
+                          <input class="filled-in singleOrganizationCheck" type="checkbox" name="listEmployee" data-name="HRD" data-id="13473" id="org-13473">
+                          <label for="org-13473"></label>
+                      </td>
+                      <td class="sorting_1">HRD</td>
+                  </tr><tr role="row" class="odd">
+                      <td class="center-align">
+                          <input class="filled-in singleOrganizationCheck" type="checkbox" name="listEmployee" data-name="HRD &amp; GA" data-id="13472" id="org-13472">
+                          <label for="org-13472"></label>
+                      </td>
+                      <td class="sorting_1">HRD &amp; GA</td>
+                  </tr><tr role="row" class="even">
+                      <td class="center-align">
+                          <input class="filled-in singleOrganizationCheck" type="checkbox" name="listEmployee" data-name="Human hire" data-id="17153" id="org-17153">
+                          <label for="org-17153"></label>
+                      </td>
+                      <td class="sorting_1">Human hire</td>
+                  </tr><tr role="row" class="odd">
+                      <td class="center-align">
+                          <input class="filled-in singleOrganizationCheck" type="checkbox" name="listEmployee" data-name="Human resource" data-id="17151" id="org-17151">
+                          <label for="org-17151"></label>
+                      </td>
+                      <td class="sorting_1">Human resource</td>
+                  </tr><tr role="row" class="even">
+                      <td class="center-align">
+                          <input class="filled-in singleOrganizationCheck" type="checkbox" name="listEmployee" data-name="Human skill" data-id="17152" id="org-17152">
+                          <label for="org-17152"></label>
+                      </td>
+                      <td class="sorting_1">Human skill</td>
+                  </tr></tbody>
+      </table><div class="dataTables_info" id="dataTable-organization-filter_info" role="status" aria-live="polite">Showing 1 to 10 of 14 entries</div><div class="dataTables_paginate paging_simple_numbers" id="dataTable-organization-filter_paginate"><a class="dataTable_pagination previous disabled" aria-controls="dataTable-organization-filter" data-dt-idx="0" tabindex="0" id="dataTable-organization-filter_previous">&lt;</a><span><a class="dataTable_pagination current" aria-controls="dataTable-organization-filter" data-dt-idx="1" tabindex="0">1</a><a class="dataTable_pagination " aria-controls="dataTable-organization-filter" data-dt-idx="2" tabindex="0">2</a></span><a class="dataTable_pagination next" aria-controls="dataTable-organization-filter" data-dt-idx="3" tabindex="0" id="dataTable-organization-filter_next">&gt;</a></div><div class="dataTables_paginate_navigate"><div class="btn btnB01 h30 w80 goPagination"><div class="w50p"><input type="number" min="1" class="form-control"></div><div class="gotoPage w50p h100p grey white-text mrm5 goPaginationButton">GO</div></div></div></div>
+    </div>
+      <div class="modal-footer fix1">
+        <a href="#" class="modal-action modal-close btn btnB01 right" id="btnOrganizationBankClear">Clear</a>
+        <a href="#" class="modal-action modal-close btn btnB01 right mr5" id="btnOrganizationBankConfirm">Filter</a>
+    </div>
+</div>
+<!-- Modal Department -->
+
+<!-- Modal Upload File -->
+<div id="modalUploadFile" class="modal modal-fixed-footer w400 h400">
+  <div class="modal-content">
+    <h4 class="titleB01">Upload File</h4>
+    <br>
+    <a class="btn btnB01 mtm10 ml10" id="attachFileAnnouncement">Choose File(max 5 MB)</a>
+    <div class="displayNone">
+      
+<span class="btn btn-success fileinput-button">
+   <i class="glyphicon glyphicon-plus"></i>
+   <span>Select file...</span>
+   <!-- The file input field used as target for the file upload widget -->
+    <input type="hidden" name="Adjustment[import_announcement]" value=""><input type="file" id="adjustment-import_announcement" name="Adjustment[import_announcement]" data-url="/announcement/upload-file"></span>
+    </div>
+  </div>
+  <div class="modal-footer fix1">
+    <a class="btn btnB01 modal-close modal-action">Cancel</a>
+  </div>
+</div>
+<input type="hidden" value="" id="AWSUrl">
+<!-- Modal Upload File -->
+
+ 
+<!-- Modal Add To Branch -->
+<div id="modalAddToBranch" class="modal modal-fixed-footer">
+  <form id="formMoveBranch" action="/branch/move-branch" method="post">
+<input type="hidden" name="_csrf" value="4FvMAP6QOQIgt1zaiOpQ2wNC2G2esGrzEm81kXiQkui5Lp9BufxpYEbhZa2_kxnrexGaD9qIUqt-OkH_VcWkoQ==">  <div class="modal-content">
+    <h4>Change Employee Status</h4>
+    <hr>
+    <div class="row">
+      <div class="input-field col l12">
+        <div class="form-group field-branch-effectivedate">
+<label class="control-label" for="branch-effectivedate">Effective Date</label>
+<input type="text" id="branch-effectivedate" class="datepicker picker__input" name="Branch[effectiveDate]" readonly="" tabindex="-1" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="branch-effectivedate_root"><div class="picker" id="branch-effectivedate_root" tabindex="0" aria-hidden="true"><div class="picker__holder"><div class="picker__frame"><div class="picker__wrap"><div class="picker__box"><div class="picker__date-display"><div class="picker__weekday-display">Sunday</div><div class="picker__month-display"><div>Feb</div></div><div class="picker__day-display"><div>10</div></div><div class="picker__year-display"><div>2019</div></div></div><div class="picker__calendar-container"><div class="picker__header"><select class="picker__select--month browser-default" disabled="" aria-controls="branch-effectivedate_table" title="Select a month"><option value="0">January</option><option value="1" selected="">February</option><option value="2">March</option><option value="3">April</option><option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option><option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option></select><select class="picker__select--year browser-default" disabled="" aria-controls="branch-effectivedate_table" title="Select a year"><option value="1900">1900</option><option value="1901">1901</option><option value="1902">1902</option><option value="1903">1903</option><option value="1904">1904</option><option value="1905">1905</option><option value="1906">1906</option><option value="1907">1907</option><option value="1908">1908</option><option value="1909">1909</option><option value="1910">1910</option><option value="1911">1911</option><option value="1912">1912</option><option value="1913">1913</option><option value="1914">1914</option><option value="1915">1915</option><option value="1916">1916</option><option value="1917">1917</option><option value="1918">1918</option><option value="1919">1919</option><option value="1920">1920</option><option value="1921">1921</option><option value="1922">1922</option><option value="1923">1923</option><option value="1924">1924</option><option value="1925">1925</option><option value="1926">1926</option><option value="1927">1927</option><option value="1928">1928</option><option value="1929">1929</option><option value="1930">1930</option><option value="1931">1931</option><option value="1932">1932</option><option value="1933">1933</option><option value="1934">1934</option><option value="1935">1935</option><option value="1936">1936</option><option value="1937">1937</option><option value="1938">1938</option><option value="1939">1939</option><option value="1940">1940</option><option value="1941">1941</option><option value="1942">1942</option><option value="1943">1943</option><option value="1944">1944</option><option value="1945">1945</option><option value="1946">1946</option><option value="1947">1947</option><option value="1948">1948</option><option value="1949">1949</option><option value="1950">1950</option><option value="1951">1951</option><option value="1952">1952</option><option value="1953">1953</option><option value="1954">1954</option><option value="1955">1955</option><option value="1956">1956</option><option value="1957">1957</option><option value="1958">1958</option><option value="1959">1959</option><option value="1960">1960</option><option value="1961">1961</option><option value="1962">1962</option><option value="1963">1963</option><option value="1964">1964</option><option value="1965">1965</option><option value="1966">1966</option><option value="1967">1967</option><option value="1968">1968</option><option value="1969">1969</option><option value="1970">1970</option><option value="1971">1971</option><option value="1972">1972</option><option value="1973">1973</option><option value="1974">1974</option><option value="1975">1975</option><option value="1976">1976</option><option value="1977">1977</option><option value="1978">1978</option><option value="1979">1979</option><option value="1980">1980</option><option value="1981">1981</option><option value="1982">1982</option><option value="1983">1983</option><option value="1984">1984</option><option value="1985">1985</option><option value="1986">1986</option><option value="1987">1987</option><option value="1988">1988</option><option value="1989">1989</option><option value="1990">1990</option><option value="1991">1991</option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019" selected="">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option><option value="2032">2032</option><option value="2033">2033</option><option value="2034">2034</option><option value="2035">2035</option><option value="2036">2036</option><option value="2037">2037</option></select><div class="picker__nav--prev" data-nav="-1" role="button" aria-controls="branch-effectivedate_table" title="Previous month"> </div><div class="picker__nav--next" data-nav="1" role="button" aria-controls="branch-effectivedate_table" title="Next month"> </div></div><table class="picker__table" id="branch-effectivedate_table" role="grid" aria-controls="branch-effectivedate" aria-readonly="true"><thead><tr><th class="picker__weekday" scope="col" title="Sunday">S</th><th class="picker__weekday" scope="col" title="Monday">M</th><th class="picker__weekday" scope="col" title="Tuesday">T</th><th class="picker__weekday" scope="col" title="Wednesday">W</th><th class="picker__weekday" scope="col" title="Thursday">T</th><th class="picker__weekday" scope="col" title="Friday">F</th><th class="picker__weekday" scope="col" title="Saturday">S</th></tr></thead><tbody><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548522000000" role="gridcell" aria-label="27 January, 2019">27</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548608400000" role="gridcell" aria-label="28 January, 2019">28</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548694800000" role="gridcell" aria-label="29 January, 2019">29</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548781200000" role="gridcell" aria-label="30 January, 2019">30</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548867600000" role="gridcell" aria-label="31 January, 2019">31</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1548954000000" role="gridcell" aria-label="1 February, 2019">1</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549040400000" role="gridcell" aria-label="2 February, 2019">2</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549126800000" role="gridcell" aria-label="3 February, 2019">3</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549213200000" role="gridcell" aria-label="4 February, 2019">4</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549299600000" role="gridcell" aria-label="5 February, 2019">5</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549386000000" role="gridcell" aria-label="6 February, 2019">6</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549472400000" role="gridcell" aria-label="7 February, 2019">7</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549558800000" role="gridcell" aria-label="8 February, 2019">8</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549645200000" role="gridcell" aria-label="9 February, 2019">9</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus picker__day--today picker__day--highlighted" data-pick="1549731600000" role="gridcell" aria-label="10 February, 2019" aria-activedescendant="true">10</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549818000000" role="gridcell" aria-label="11 February, 2019">11</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549904400000" role="gridcell" aria-label="12 February, 2019">12</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549990800000" role="gridcell" aria-label="13 February, 2019">13</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550077200000" role="gridcell" aria-label="14 February, 2019">14</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550163600000" role="gridcell" aria-label="15 February, 2019">15</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550250000000" role="gridcell" aria-label="16 February, 2019">16</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550336400000" role="gridcell" aria-label="17 February, 2019">17</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550422800000" role="gridcell" aria-label="18 February, 2019">18</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550509200000" role="gridcell" aria-label="19 February, 2019">19</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550595600000" role="gridcell" aria-label="20 February, 2019">20</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550682000000" role="gridcell" aria-label="21 February, 2019">21</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550768400000" role="gridcell" aria-label="22 February, 2019">22</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550854800000" role="gridcell" aria-label="23 February, 2019">23</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550941200000" role="gridcell" aria-label="24 February, 2019">24</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1551027600000" role="gridcell" aria-label="25 February, 2019">25</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1551114000000" role="gridcell" aria-label="26 February, 2019">26</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1551200400000" role="gridcell" aria-label="27 February, 2019">27</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1551286800000" role="gridcell" aria-label="28 February, 2019">28</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551373200000" role="gridcell" aria-label="1 March, 2019">1</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551459600000" role="gridcell" aria-label="2 March, 2019">2</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551546000000" role="gridcell" aria-label="3 March, 2019">3</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551632400000" role="gridcell" aria-label="4 March, 2019">4</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551718800000" role="gridcell" aria-label="5 March, 2019">5</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551805200000" role="gridcell" aria-label="6 March, 2019">6</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551891600000" role="gridcell" aria-label="7 March, 2019">7</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551978000000" role="gridcell" aria-label="8 March, 2019">8</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1552064400000" role="gridcell" aria-label="9 March, 2019">9</div></td></tr></tbody></table></div><div class="picker__footer"><button class="btn-flat picker__today" type="button" data-pick="1549731600000" disabled="" aria-controls="branch-effectivedate">Today</button><button class="btn-flat picker__clear" type="button" data-clear="1" disabled="" aria-controls="branch-effectivedate">Clear</button><button class="btn-flat picker__close" type="button" data-close="true" disabled="" aria-controls="branch-effectivedate">Select</button></div></div></div></div></div></div><input type="hidden" name="Branch[effectiveDate]_submit">
+
+<div class="help-block"></div>
+</div>      </div>
+    </div>
+    <div class="row displayNone">
+        <div class="col l12">
+          <div class="input-field field-branch-name">
+<div class="select-wrapper initialized"><span class="caret"><i class="fa fa-plus"></i></span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-2fb554f3-5769-a400-cbe0-f7e1b536d6ed" value="-- Select Branch --"><ul id="select-options-2fb554f3-5769-a400-cbe0-f7e1b536d6ed" class="dropdown-content select-dropdown "><li class=""><span>-- Select Branch --</span></li><li class=""><span>Jogja</span></li></ul><select id="branch-name" class="initialized" name="Branch[name]">
+<option value="">-- Select Branch --</option>
+<option value="1949">Jogja</option>
+</select></div><label class="control-label" for="branch-name">Select Branch</label>
+</div>        </div>
+    </div>
+    <div class="row">
+      <div class="input-field col l12">
+          <div class="input-field field-branch-status_employee">
+<div class="select-wrapper form-control selectoption initialized"><span class="caret"><i class="fa fa-plus"></i></span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-81697f10-5c53-bf26-2ab7-14232d0ce1bb" value="-- Select Status Employee--"><ul id="select-options-81697f10-5c53-bf26-2ab7-14232d0ce1bb" class="dropdown-content select-dropdown "><li class=""><span>-- Select Status Employee--</span></li><li class=""><span>Permanent</span></li><li class=""><span>Contract</span></li><li class=""><span>Probation</span></li></ul><select id="branch-status_employee" class="form-control selectoption initialized" name="Branch[status_employee]" style="opacity: 0;top: 0;left: 0;position:absolute;">
+<option value="">-- Select Status Employee--</option>
+<option value="1">Permanent</option>
+<option value="2">Contract</option>
+<option value="3">Probation</option>
+</select></div><label class="control-label" for="branch-status_employee">Status Employee</label>
+</div>      </div>
+    </div>
+    <div id="endEffectiveDateRow" class="row displayNone">
+      <div class="input-field col l12">
+        <div class="form-group field-branch-endeffectivedate">
+<label class="control-label" for="branch-endeffectivedate">End Effective Date</label>
+<input type="text" id="branch-endeffectivedate" class="datepicker picker__input" name="Branch[endEffectiveDate]" readonly="" tabindex="-1" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="branch-endeffectivedate_root"><div class="picker" id="branch-endeffectivedate_root" tabindex="0" aria-hidden="true"><div class="picker__holder"><div class="picker__frame"><div class="picker__wrap"><div class="picker__box"><div class="picker__date-display"><div class="picker__weekday-display">Sunday</div><div class="picker__month-display"><div>Feb</div></div><div class="picker__day-display"><div>10</div></div><div class="picker__year-display"><div>2019</div></div></div><div class="picker__calendar-container"><div class="picker__header"><select class="picker__select--month browser-default" disabled="" aria-controls="branch-endeffectivedate_table" title="Select a month"><option value="0">January</option><option value="1" selected="">February</option><option value="2">March</option><option value="3">April</option><option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option><option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option></select><select class="picker__select--year browser-default" disabled="" aria-controls="branch-endeffectivedate_table" title="Select a year"><option value="1900">1900</option><option value="1901">1901</option><option value="1902">1902</option><option value="1903">1903</option><option value="1904">1904</option><option value="1905">1905</option><option value="1906">1906</option><option value="1907">1907</option><option value="1908">1908</option><option value="1909">1909</option><option value="1910">1910</option><option value="1911">1911</option><option value="1912">1912</option><option value="1913">1913</option><option value="1914">1914</option><option value="1915">1915</option><option value="1916">1916</option><option value="1917">1917</option><option value="1918">1918</option><option value="1919">1919</option><option value="1920">1920</option><option value="1921">1921</option><option value="1922">1922</option><option value="1923">1923</option><option value="1924">1924</option><option value="1925">1925</option><option value="1926">1926</option><option value="1927">1927</option><option value="1928">1928</option><option value="1929">1929</option><option value="1930">1930</option><option value="1931">1931</option><option value="1932">1932</option><option value="1933">1933</option><option value="1934">1934</option><option value="1935">1935</option><option value="1936">1936</option><option value="1937">1937</option><option value="1938">1938</option><option value="1939">1939</option><option value="1940">1940</option><option value="1941">1941</option><option value="1942">1942</option><option value="1943">1943</option><option value="1944">1944</option><option value="1945">1945</option><option value="1946">1946</option><option value="1947">1947</option><option value="1948">1948</option><option value="1949">1949</option><option value="1950">1950</option><option value="1951">1951</option><option value="1952">1952</option><option value="1953">1953</option><option value="1954">1954</option><option value="1955">1955</option><option value="1956">1956</option><option value="1957">1957</option><option value="1958">1958</option><option value="1959">1959</option><option value="1960">1960</option><option value="1961">1961</option><option value="1962">1962</option><option value="1963">1963</option><option value="1964">1964</option><option value="1965">1965</option><option value="1966">1966</option><option value="1967">1967</option><option value="1968">1968</option><option value="1969">1969</option><option value="1970">1970</option><option value="1971">1971</option><option value="1972">1972</option><option value="1973">1973</option><option value="1974">1974</option><option value="1975">1975</option><option value="1976">1976</option><option value="1977">1977</option><option value="1978">1978</option><option value="1979">1979</option><option value="1980">1980</option><option value="1981">1981</option><option value="1982">1982</option><option value="1983">1983</option><option value="1984">1984</option><option value="1985">1985</option><option value="1986">1986</option><option value="1987">1987</option><option value="1988">1988</option><option value="1989">1989</option><option value="1990">1990</option><option value="1991">1991</option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019" selected="">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option><option value="2032">2032</option><option value="2033">2033</option><option value="2034">2034</option><option value="2035">2035</option><option value="2036">2036</option><option value="2037">2037</option></select><div class="picker__nav--prev" data-nav="-1" role="button" aria-controls="branch-endeffectivedate_table" title="Previous month"> </div><div class="picker__nav--next" data-nav="1" role="button" aria-controls="branch-endeffectivedate_table" title="Next month"> </div></div><table class="picker__table" id="branch-endeffectivedate_table" role="grid" aria-controls="branch-endeffectivedate" aria-readonly="true"><thead><tr><th class="picker__weekday" scope="col" title="Sunday">S</th><th class="picker__weekday" scope="col" title="Monday">M</th><th class="picker__weekday" scope="col" title="Tuesday">T</th><th class="picker__weekday" scope="col" title="Wednesday">W</th><th class="picker__weekday" scope="col" title="Thursday">T</th><th class="picker__weekday" scope="col" title="Friday">F</th><th class="picker__weekday" scope="col" title="Saturday">S</th></tr></thead><tbody><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548522000000" role="gridcell" aria-label="27 January, 2019">27</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548608400000" role="gridcell" aria-label="28 January, 2019">28</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548694800000" role="gridcell" aria-label="29 January, 2019">29</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548781200000" role="gridcell" aria-label="30 January, 2019">30</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1548867600000" role="gridcell" aria-label="31 January, 2019">31</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1548954000000" role="gridcell" aria-label="1 February, 2019">1</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549040400000" role="gridcell" aria-label="2 February, 2019">2</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549126800000" role="gridcell" aria-label="3 February, 2019">3</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549213200000" role="gridcell" aria-label="4 February, 2019">4</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549299600000" role="gridcell" aria-label="5 February, 2019">5</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549386000000" role="gridcell" aria-label="6 February, 2019">6</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549472400000" role="gridcell" aria-label="7 February, 2019">7</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549558800000" role="gridcell" aria-label="8 February, 2019">8</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549645200000" role="gridcell" aria-label="9 February, 2019">9</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus picker__day--today picker__day--highlighted" data-pick="1549731600000" role="gridcell" aria-label="10 February, 2019" aria-activedescendant="true">10</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549818000000" role="gridcell" aria-label="11 February, 2019">11</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549904400000" role="gridcell" aria-label="12 February, 2019">12</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1549990800000" role="gridcell" aria-label="13 February, 2019">13</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550077200000" role="gridcell" aria-label="14 February, 2019">14</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550163600000" role="gridcell" aria-label="15 February, 2019">15</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550250000000" role="gridcell" aria-label="16 February, 2019">16</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550336400000" role="gridcell" aria-label="17 February, 2019">17</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550422800000" role="gridcell" aria-label="18 February, 2019">18</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550509200000" role="gridcell" aria-label="19 February, 2019">19</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550595600000" role="gridcell" aria-label="20 February, 2019">20</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550682000000" role="gridcell" aria-label="21 February, 2019">21</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550768400000" role="gridcell" aria-label="22 February, 2019">22</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550854800000" role="gridcell" aria-label="23 February, 2019">23</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1550941200000" role="gridcell" aria-label="24 February, 2019">24</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1551027600000" role="gridcell" aria-label="25 February, 2019">25</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1551114000000" role="gridcell" aria-label="26 February, 2019">26</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1551200400000" role="gridcell" aria-label="27 February, 2019">27</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1551286800000" role="gridcell" aria-label="28 February, 2019">28</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551373200000" role="gridcell" aria-label="1 March, 2019">1</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551459600000" role="gridcell" aria-label="2 March, 2019">2</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551546000000" role="gridcell" aria-label="3 March, 2019">3</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551632400000" role="gridcell" aria-label="4 March, 2019">4</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551718800000" role="gridcell" aria-label="5 March, 2019">5</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551805200000" role="gridcell" aria-label="6 March, 2019">6</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551891600000" role="gridcell" aria-label="7 March, 2019">7</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1551978000000" role="gridcell" aria-label="8 March, 2019">8</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1552064400000" role="gridcell" aria-label="9 March, 2019">9</div></td></tr></tbody></table></div><div class="picker__footer"><button class="btn-flat picker__today" type="button" data-pick="1549731600000" disabled="" aria-controls="branch-endeffectivedate">Today</button><button class="btn-flat picker__clear" type="button" data-clear="1" disabled="" aria-controls="branch-endeffectivedate">Clear</button><button class="btn-flat picker__close" type="button" data-close="true" disabled="" aria-controls="branch-endeffectivedate">Select</button></div></div></div></div></div></div><input type="hidden" name="Branch[endEffectiveDate]_submit">
+
+<div class="help-block"></div>
+</div>      </div>
+    </div>
+    <div class="row displayNone">
+      <div class="input-field col l12">
+          <div class="input-field field-branch-job_position">
+<div class="select-wrapper initialized"><span class="caret"><i class="fa fa-plus"></i></span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-6cc8dc93-2d38-c70f-2584-0b885393be86" value="-- Select Job Position --"><ul id="select-options-6cc8dc93-2d38-c70f-2584-0b885393be86" class="dropdown-content select-dropdown "><div class="select-search-wrapper"><input type="text" placeholder="Search.."></div><li class=""><span>-- Select Job Position --</span></li><li class=""><span>CEO</span></li><li class=""><span>Manager Finance &amp; Accounting</span></li><li class=""><span>Manager HRD &amp; GA</span></li><li class=""><span>Manager IT</span></li><li class=""><span>Manager Sales &amp; Marketing</span></li><li class=""><span>OB</span></li><li class=""><span>Staff Accounting</span></li><li class=""><span>Staff Finance</span></li><li class=""><span>Staff GA</span></li><li class=""><span>Staff HRD</span></li><li class=""><span>Staff IT</span></li><li class=""><span>Staff Marketing</span></li><li class=""><span>Staff Sales</span></li><li class=""><span>Supervisor Accounting</span></li><li class=""><span>Supervisor Finance</span></li><li class=""><span>Supervisor HRD &amp; GA</span></li><li class=""><span>Supervisor IT</span></li><li class=""><span>Supervisor Sales &amp; Marketing</span></li></ul><select id="branch-job_position" class="initialized" name="Branch[job_position]">
+<option value="">-- Select Job Position --</option>
+<option value="33618">CEO</option>
+<option value="33623">Manager Finance &amp; Accounting</option>
+<option value="33619">Manager HRD &amp; GA</option>
+<option value="33632">Manager IT</option>
+<option value="33628">Manager Sales &amp; Marketing</option>
+<option value="53883">OB</option>
+<option value="33625">Staff Accounting</option>
+<option value="33627">Staff Finance</option>
+<option value="33622">Staff GA</option>
+<option value="33621">Staff HRD</option>
+<option value="33634">Staff IT</option>
+<option value="33631">Staff Marketing</option>
+<option value="33630">Staff Sales</option>
+<option value="33624">Supervisor Accounting</option>
+<option value="33626">Supervisor Finance</option>
+<option value="33620">Supervisor HRD &amp; GA</option>
+<option value="33633">Supervisor IT</option>
+<option value="33629">Supervisor Sales &amp; Marketing</option>
+</select></div><label class="control-label" for="branch-job_position">Select Job Position</label>
+</div>      </div>
+    </div>
+    <div class="row displayNone">
+      <div class="input-field col l12">
+          <div class="input-field field-branch-organization">
+<div class="select-wrapper initialized"><span class="caret"><i class="fa fa-plus"></i></span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-6f923070-1de6-26b5-a3f7-5c33ce6b8153" value="-- Select Organization --"><ul id="select-options-6f923070-1de6-26b5-a3f7-5c33ce6b8153" class="dropdown-content select-dropdown "><div class="select-search-wrapper"><input type="text" placeholder="Search.."></div><li class=""><span>-- Select Organization --</span></li><li class=""><span>Accounting</span></li><li class=""><span>BOD</span></li><li class=""><span>Finance</span></li><li class=""><span>Finance &amp; Accounting</span></li><li class=""><span>GA</span></li><li class=""><span>HRD</span></li><li class=""><span>HRD &amp; GA</span></li><li class=""><span>Human hire</span></li><li class=""><span>Human resource</span></li><li class=""><span>Human skill</span></li><li class=""><span>IT Division</span></li><li class=""><span>Marketing</span></li><li class=""><span>Sales</span></li><li class=""><span>Sales &amp; Marketing</span></li></ul><select id="branch-organization" class="initialized" name="Branch[organization]">
+<option value="">-- Select Organization --</option>
+<option value="13477">Accounting</option>
+<option value="13471">BOD</option>
+<option value="13476">Finance</option>
+<option value="13475">Finance &amp; Accounting</option>
+<option value="13474">GA</option>
+<option value="13473">HRD</option>
+<option value="13472">HRD &amp; GA</option>
+<option value="17153">Human hire</option>
+<option value="17151">Human resource</option>
+<option value="17152">Human skill</option>
+<option value="13478">IT Division</option>
+<option value="13481">Marketing</option>
+<option value="13480">Sales</option>
+<option value="13479">Sales &amp; Marketing</option>
+</select></div><label class="control-label" for="branch-organization">Select Organization</label>
+</div>      </div>
+    </div>
+    <div class="row displayNone">
+      <div class="input-field col l12">
+          <div class="input-field field-branch-title">
+<div class="select-wrapper initialized"><span class="caret"><i class="fa fa-plus"></i></span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-c2cfc1e3-3695-7b8d-e61a-0ec185287fea" value="-- Select Job Level --"><ul id="select-options-c2cfc1e3-3695-7b8d-e61a-0ec185287fea" class="dropdown-content select-dropdown "><li class=""><span>-- Select Job Level --</span></li><li class=""><span>CEO</span></li><li class=""><span>Manager</span></li><li class=""><span>staff</span></li><li class=""><span>Supervisor</span></li></ul><select id="branch-title" class="initialized" name="Branch[title]">
+<option value="">-- Select Job Level --</option>
+<option value="6172">CEO</option>
+<option value="6173">Manager</option>
+<option value="6175">staff</option>
+<option value="6174">Supervisor</option>
+</select></div><label class="control-label" for="branch-title">Select Job Level</label>
+</div>      </div>
+    </div>
+    <div class="row displayNone">
+      <div class="input-field col l12">
+        <div class="select-wrapper form-control selectpicker initialized"><span class="caret"><i class="fa fa-plus"></i></span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-c3af9a86-00df-6ecb-d037-7abb5670c45e" value="-- Select Grade &amp; Class --"><ul id="select-options-c3af9a86-00df-6ecb-d037-7abb5670c45e" class="dropdown-content select-dropdown "><li class=""><span>-- Select Grade &amp; Class --</span></li></ul><select class="form-control selectpicker initialized" name="Branch[class_id]">
+          <option value="">-- Select Grade &amp; Class --</option>
+        </select></div>
+        <label>Select Grade &amp; Class</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col l12">
+        <span id="listEmployeeMoveBranch"></span>
+      </div>
+    </div>
+  </div><!-- Modal Content -->
+  <div class="modal-footer fix1">
+    <a href="#!" class="modal-action modal-close btn btnB01 right">No</a>
+    <a class="btn btnB01 right mr5" id="btnMoveEmployeeDashboard">Yes</a>
+  </div>
+  </form></div>
+
+<!-- Modal Resign Employee -->
+<div id="modalResignEmployee" class="modal modal-fixed-footer h40p w360 lineHeight14">
+  <div class="modal-content">
+    <p>Do you want to resign <span class="employeeNameSpan"></span>?</p>
+    <p><span class="warningResignSpan red1-text"></span></p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close btn btnB01 right">No</a>
+    <a href="#!" class="btn btnB01 right mr5" id="btnResignEmployee">Yes</a>
+  </div>
+</div>
+
+<!-- Modal Resign Employee 2 -->
+<div id="modalResignEmployee2" class="modal modal-fixed-footer lineHeight14">
+  <form id="resign-form" class="form-horizontal" action="/employee/dashboard" method="post">
+<input type="hidden" name="_csrf" value="4FvMAP6QOQIgt1zaiOpQ2wNC2G2esGrzEm81kXiQkui5Lp9BufxpYEbhZa2_kxnrexGaD9qIUqt-OkH_VcWkoQ==">  <div class="modal-content">
+    <h4 class="titleB01">RESIGN</h4>
+    <hr class="mb40">
+    <!-- Employee ID & Name Resign -->
+    <div class="row">
+      <div class="input-field col l6">
+        <input type="text" id="inputIdKaryawan" placeholder=" " disabled="disabled">
+        <label class="active" for="inputIdKaryawan">Employee ID</label>
+      </div>
+      <div class="input-field col l6">
+        <input type="text" id="inputNamaKaryawan" disabled="disabled" placeholder=" ">
+        <label class="active" for="inputNamaKaryawan">Employee Name</label>
+      </div>
+    </div><!-- Employee ID & Name Resign -->
+
+    <!-- Job Position -->
+    <div class="row">
+      <div class="input-field col l12">
+        <input type="text" id="inputJabatanKaryawan" disabled="disabled" placeholder=" ">
+        <label class="active" for="inputJabatanKaryawan">Job Level</label>
+      </div>
+    </div><!-- Job Position -->
+
+
+    <div class="form-group field-employeeresign-duration">
+
+<input type="hidden" id="employeeresign-duration" class="form-control" name="EmployeeResign[duration]">
+
+<div class="help-block"></div>
+</div>
+    <!-- Join & Resign Date -->
+    <div class="row">
+      <div class="input-field col l6">
+        <input type="text" id="inputJoinDate" disabled="disabled" value=" ">
+        <label class="active" for="inputJoinDate">Join Date</label>
+      </div>
+      <div class="input-field col l6">
+        <div class="form-group field-employeeresign-resign_date required">
+<label class="control-label active" for="employeeresign-resign_date">Resign Date</label>
+<input type="text" id="employeeresign-resign_date" class="datepickerResign" name="EmployeeResign[resign_date]" readonly="true" placeholder=" " aria-required="true">
+
+<div class="help-block"></div>
+</div>      </div>
+    </div><!-- Join & Resign Date -->
+
+    <!-- Length Of Service & Merit Pay -->
+    <div class="row">
+      <div class="input-field col s6">
+        <div class="form-group field-employeeresign-length_of_service">
+<label class="control-label active" for="employeeresign-length_of_service">Length of Service</label>
+<input type="text" id="employeeresign-length_of_service" class="form-control" name="EmployeeResign[length_of_service]" disabled="disabled" placeholder=" ">
+
+<div class="help-block"></div>
+</div>      </div>
+      <div class="input-field col s6">
+         <div class="form-group field-employeeresign-merit_pay required">
+<label class="control-label active" for="employeeresign-merit_pay">Merit Pay</label>
+<input type="text" id="employeeresign-merit_pay" class="moneyMaskingTextBox" name="EmployeeResign[merit_pay]" value="0" aria-required="true">
+
+<div class="help-block"></div>
+</div>      </div>
+      <div class="input-field col s6">
+         <div class="form-group field-employeeresign-severance">
+<label class="control-label active" for="employeeresign-severance">Severance</label>
+<input type="text" id="employeeresign-severance" class="moneyMaskingTextBox" name="EmployeeResign[severance]" value="0">
+
+<div class="help-block"></div>
+</div>      </div>
+      <div class="input-field col s6">
+        <div class="form-group field-employeeresign-compensation_pay">
+<label class="control-label active" for="employeeresign-compensation_pay">Compensation Pay</label>
+<input type="text" id="employeeresign-compensation_pay" class="moneyMaskingTextBox" name="EmployeeResign[compensation_pay]" value="0">
+
+<div class="help-block"></div>
+</div>      </div>
+    </div>
+
+    <!-- Loan-->
+    <div class="row">
+      <div class="input-field col s6 remainingLoanResign displayNone">
+        <div class="form-group field-inputRemainingLoan">
+<label class="control-label active" for="inputRemainingLoan">Remaining Loan</label>
+<input type="text" id="inputRemainingLoan" class="moneyMaskingTextBox" name="EmployeeResign[loan_limit]" value="0">
+
+<div class="help-block"></div>
+</div>      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s4">
+         <label class="active" for="inputTimeOffRemaining">Time Off Compensation</label>
+         <input type="text" id="inputTimeOffRemaining" class="inputDurationTimeOff" value="0" disabled="disabled">
+      </div>
+      <div class="input-field col s4">
+         <label class="active" for="inputTimeOffRemainingPerDay">Amount per day</label>
+         <input type="text" id="inputTimeOffRemainingperDay" class="moneyMaskingTextBox" value="0" disabled="disabled">
+      </div>
+      <div class="input-field col s4">
+         <label class="active" for="inputTimeOffCompensation">Total Amount</label>
+         <input type="text" id="inputTimeOffCompensation" name="EmployeeResign[leave_compensation]" class="moneyMaskingTextBox" value="0" readonly="true">
+      </div>
+    </div>
+
+    <div class="row displayNone" id="nextPaymentDiv">
+      <div class="col s3">
+         Payment Period :
+      </div>
+      <div class="col s3">
+        <input class="with-gap" name="EmployeeResign[next_payment]" type="radio" id="thisPeriod" value="0" checked="checked">
+        <label for="thisPeriod">This Period</label>
+      </div>
+      <div class="col s3">
+        <input class="with-gap" name="EmployeeResign[next_payment]" type="radio" id="nextPayment" value="1">
+        <label for="nextPayment">Next Period</label>
+      </div>
+    </div>
+
+    <!-- Asset -->
+    <div class="row">
+      <div class="col l12">
+        <table class="bordered" id="dataTableRemainingLoanedAsset">
+          <thead>
+            <tr>
+              <th width="50">No</th>
+              <th>Asset Category</th>
+              <th>Serial Number</th>
+              <th>Description</th>
+              <th>Date Loaned</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div><!-- Asset -->
+
+    <!-- Reason -->
+    <div class="row">
+      <div class="input-field col l12">
+         <div class="form-group field-employeeresign-reason required">
+<label class="control-label" for="employeeresign-reason">Reason</label>
+<textarea id="employeeresign-reason" class="materialize-textarea" name="EmployeeResign[reason]" rows="5" aria-required="true"></textarea>
+
+<div class="help-block"></div>
+</div>      </div>
+    </div><!-- Reason -->
+      <div class="form-group field-employeeresign-employee_id_fk required">
+
+<input type="hidden" id="employeeresign-employee_id_fk" class="form-control" name="EmployeeResign[employee_id_fk]">
+
+<div class="help-block"></div>
+</div>
+  </div><!-- Modal Content -->
+  <div class="modal-footer fix1">
+    <a href="#!" class="modal-action modal-close btn btnB01 right">No</a>
+    <a href="#!" class="btn btnB01 right mr5" id="btnResignEmployee2">Yes</a>
+  </div>
+  </form></div>
+
+
+
+
+
+<!-- Modal Request Limit Employee -->
+
+<div id="modalReqLimitUser" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <!-- <h4 class="titleB01">Your company has reached quota limit to add employee</h4> -->
+        <!-- <hr class="mb40"> -->
+        <div>
+            <p> Your company has reached quota limit to add employee. 
+            You can request to upgrade limit employee with this form. </p>
+        </div>
+        <div class="row">
+            <div class="input-field col l4">
+                <input type="text" class="moneyMaskingTextBox" id="totalUser">
+                <label class="" for="totalUser">Total User</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col l4">
+                <input type="text" class="moneyMaskingTextBox" placeholder=" " id="price" disabled="disabled">
+                <label class="active" for="price">Price</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col l4">
+                <input type="text" class="moneyMaskingTextBox" placeholder=" " id="remainingContract" disabled="disabled">
+                <label class="active" for="remainingContract">Remaining Contract(Months)</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col l4">
+                <input type="text" class="moneyMaskingTextBox" placeholder=" " id="totalAmount" disabled="disabled">
+                <label class="active" for="totalAmount">Total Amount</label>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-close btn btnB01 right">Cancel</a>
+        <a href="#!" class="btn btnB01 right mr5" id="btnReqLimitUser">Submit</a>
+    </div>
+</div>
+
+<input type="hidden" id="urlReqLimitEmployee" value="/employee/request-limit-employee">
+<input type="hidden" id="resignURL" value="/employee/get-lengthofservice">
+<input type="hidden" id="resignURL2" value="/employee/employee-resign">
+<input type="hidden" id="getRemainingLoanURL" value="/employee/get-remaining-loan">
+<input type="hidden" id="getRemainingLoanedAssetURL" value="/employee/get-remaining-loaned-asset">
+<input type="hidden" id="getBeginningNetto" value="/employee/get-beginning-netto">
+<input type="hidden" id="moveBranchURL" value="/branch/move-branch">
+<input type="hidden" id="employeeFilterURL" value="/employee/employee-filter">
+<input type="hidden" id="surveyURL" value="/site/update-survey-data">
+<input type="hidden" id="getTimeOffRemainingURL" value="/employee/get-remaining-time-off">
+<input type="hidden" id="companyId" value="1005">
+<input type="hidden" value="https://s3-ap-southeast-1.amazonaws.com/development-talenta/onboarding/" id="AWSUrl">
+<input type="hidden" id="urlCreateAnnouncement" value="/announcement/ajax-create-announcement">
+<input type="hidden" id="urlExpiredContract" value="/site/set-flag-notif-expired-contract">
+<input type="hidden" id="connectToReviewUrl" value="/site/connect-to-review">
+<input type="hidden" id="connectToRecruitmentUrl" value="/site/connect-to-recruitment">
+<input type="hidden" id="connectToTrainingUrl" value="/site/connect-to-training">
+<input type="hidden" id="validateLimitEmployeeURL" value="/employee/validate-limit-employee">
+<input type="hidden" id="goToAddEmployeeURL" value="/employee/add-employee">
+
+
+<!-- URL For Polls -->
+<input type="hidden" class="url-get-comment" name="url_comment" value="/poll/get-comments"><input type="hidden" class="url-post-comment" name="url_post_comment" value="/poll/post-comments"><input type="hidden" class="url-give-vote" name="url_vote" value="/poll/vote"><input type="hidden" class="url-get-vote" name="url_get_vote" value="/poll/get-response"><input type="hidden" class="url-get-response-vote" name="url_get_response_vote" value="/poll/get-user-responses"><input type="hidden" class="url-get-all-polls" name="url_get_all_polls" value="/poll/get-all-polls-dashboard"><input type="hidden" class="url-delete-vote" name="url_delete_vote" value="/poll/delete"><input type="hidden" class="url-get-all-participant" name="url_get_all_participant" value="/poll/get-all-participant"><input type="hidden" class="url-get-data-poll" name="url_get_data_poll" value="/poll/get-data-poll">		</div>
+<script src="/assets/34db10df/jquery.js"></script>
+<script src="/assets/1b97a55b/yii.js"></script>
+<script src="/assets/1b97a55b/yii.activeForm.js"></script>
+<script src="/assets/c01168f/js/vendor/jquery.ui.widget.js"></script>
+<script src="/assets/c01168f/js/jquery.iframe-transport.js"></script>
+<script src="/assets/c01168f/js/jquery.fileupload.js"></script>
+<script src="/assets/5e187cd3/tinymce.js"></script>
+<script src="/assets/1b97a55b/yii.validation.js"></script>
+<script type="text/javascript">jQuery(function ($) {
+
+    $('#crt-tasks').click(function(){
+      var id=this;
+      $.ajax({
+          type: 'POST',
+          url : '/tasks/ajax-create-tasks',
+          data: $('#crt-tasks-form').serializeArray(),
+          dataType:'JSON',
+          success: function (data) {
+              if(data.status){
+                $('.crt-success').text(data.status);
+                location.reload();
+              }
+              else if(data.class){
+                setErrors('#crt-tasks-form',data);
+              }
+          },
+          error: function (data) {
+          }
+      });
+      return false;
+    });
+
+jQuery('#w0').yiiActiveForm([], []);
+jQuery('#crt-tasks-form').yiiActiveForm([], []);
+;jQuery('#adjustment-import_task_file').fileupload({"maxFileSize":5000000,"url":"/tasks/upload-task-file"});
+jQuery('#adjustment-import_task_file').on('fileuploadstart', function() {
+                                         uploadEvent("crt-tasks","start");
+                                      });
+jQuery('#adjustment-import_task_file').on('fileuploaddone', function(e, data) {
+                                         callSetDataFromUploadFileTask(e, data._response.result,data.fileInput);
+                                      });
+jQuery('#adjustment-import_task_file').on('fileuploadfail', function(e, data) {
+                                        uploadFileTaskFailed("updateTaskButton");
+                                      });
+tinymce.init({"toolbar":"undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image","selector":"#announcement-content"});
+$('#announcement-content').parents('form').on('beforeValidate', function() { tinymce.triggerSave(); });
+jQuery('#crt-announcement-form').yiiActiveForm([], []);
+;jQuery('#adjustment-import_announcement').fileupload({"maxFileSize":5000000,"dropZone":null,"url":"/announcement/upload-file"});
+jQuery('#adjustment-import_announcement').on('fileuploaddone', function(e, data) {
+                                      //console.log(data);
+                                      callSetDataFromUpload(e, JSON.parse(data._response.result));
+                                  });
+jQuery('#adjustment-import_announcement').on('fileuploadfail', function(e, data) {
+                                      // console.log("failed broh");
+                                  });
+jQuery('#formMoveBranch').yiiActiveForm([{"id":"branch-effectivedate","name":"effectiveDate","container":".field-branch-effectivedate","input":"#branch-effectivedate","validate":function (attribute, value, messages, deferred, $form) {yii.validation.string(value, messages, {"message":"Effective Date must be a string.","max":20,"tooLong":"Effective Date should contain at most 20 characters.","skipOnEmpty":1});}},{"id":"branch-name","name":"name","container":".field-branch-name","input":"#branch-name","validate":function (attribute, value, messages, deferred, $form) {yii.validation.string(value, messages, {"message":"Name must be a string.","max":100,"tooLong":"Name should contain at most 100 characters.","skipOnEmpty":1});}},{"id":"branch-status_employee","name":"status_employee","container":".field-branch-status_employee","input":"#branch-status_employee","validate":function (attribute, value, messages, deferred, $form) {yii.validation.number(value, messages, {"pattern":/^\s*[+-]?\d+\s*$/,"message":"Status Employee must be an integer.","skipOnEmpty":1});}}], []);
+jQuery('#resign-form').yiiActiveForm([{"id":"employeeresign-duration","name":"duration","container":".field-employeeresign-duration","input":"#employeeresign-duration","validate":function (attribute, value, messages, deferred, $form) {yii.validation.number(value, messages, {"pattern":/^\s*[+-]?\d+\s*$/,"message":"Duration must be an integer.","skipOnEmpty":1});}},{"id":"employeeresign-resign_date","name":"resign_date","container":".field-employeeresign-resign_date","input":"#employeeresign-resign_date","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Resign Date cannot be blank."});}},{"id":"employeeresign-length_of_service","name":"length_of_service","container":".field-employeeresign-length_of_service","input":"#employeeresign-length_of_service","validate":function (attribute, value, messages, deferred, $form) {yii.validation.string(value, messages, {"message":"Length Of Service must be a string.","skipOnEmpty":1});}},{"id":"employeeresign-merit_pay","name":"merit_pay","container":".field-employeeresign-merit_pay","input":"#employeeresign-merit_pay","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Merit Pay cannot be blank."});yii.validation.string(value, messages, {"message":"Merit Pay must be a string.","skipOnEmpty":1});}},{"id":"employeeresign-severance","name":"severance","container":".field-employeeresign-severance","input":"#employeeresign-severance","validate":function (attribute, value, messages, deferred, $form) {yii.validation.string(value, messages, {"message":"Severance must be a string.","skipOnEmpty":1});}},{"id":"employeeresign-compensation_pay","name":"compensation_pay","container":".field-employeeresign-compensation_pay","input":"#employeeresign-compensation_pay","validate":function (attribute, value, messages, deferred, $form) {yii.validation.string(value, messages, {"message":"Compensation Pay must be a string.","skipOnEmpty":1});}},{"id":"employeeresign-loan_limit","name":"loan_limit","container":".field-inputRemainingLoan","input":"#inputRemainingLoan","validate":function (attribute, value, messages, deferred, $form) {yii.validation.string(value, messages, {"message":"Loan Limit must be a string.","skipOnEmpty":1});}},{"id":"employeeresign-reason","name":"reason","container":".field-employeeresign-reason","input":"#employeeresign-reason","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Reason cannot be blank."});yii.validation.string(value, messages, {"message":"Reason must be a string.","skipOnEmpty":1});}},{"id":"employeeresign-employee_id_fk","name":"employee_id_fk","container":".field-employeeresign-employee_id_fk","input":"#employeeresign-employee_id_fk","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Employee Id Fk cannot be blank."});yii.validation.number(value, messages, {"pattern":/^\s*[+-]?\d+\s*$/,"message":"Employee Id Fk must be an integer.","skipOnEmpty":1});}}], []);
+});</script>
+	
+<script>
+  window.intercomSettings = {
+    app_id: "j37qizpv",
+    name: "Admin", // Full name
+    email: "devtalenta@gmail.com", // Email address
+    created_at: "2017-06-12 10:02:35",
+    user_hash: "8498bfcc59002f92f63ea685ff238ec2488f965d58b8b12dece96f277befafaa",
+    "Package": "Trial",
+    "Access Role": "Super Admin",
+    "Gender": "Male",
+    "Job Position": "Manager IT",
+    company: {
+       id: 1005,
+       name: "PT. Demo Performance Review Sejahtera"
+    }
+  };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/vxl06bpi';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+
+
+	<script type="text/javascript" src="/assets/new-talenta/js/materialize.min.js"></script>
+	<script type="text/javascript" src="/assets/new-talenta/js/jquery.bxslider.js"></script>
+	<script type="text/javascript" src="/assets/new-talenta/js/intro.js"></script>
+	<script type="text/javascript" src="/assets/new-talenta/js/chart.min.js"></script>
+	<script type="text/javascript" src="/assets/new-talenta/js/jquery.animateNumber.min.js"></script>
+	<script type="text/javascript" src="/assets/new-talenta/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="/assets/new-talenta/js/dataTables.fixedColumns.js"></script>
+	<script type="text/javascript" src="/assets/new-talenta/js/vanilla-masker.min.js"></script>
+				<script type="text/javascript" src="/assets/new-talenta/js/scriptEmployeeDashboard.js?v=100000114"></script>
+			<script type="text/javascript" src="/assets/new-talenta/js/scriptAnnouncement.js?v=100000114"></script>
+								<script type="text/javascript" src="/assets/new-talenta/js/mainscript.js?v=100000114"></script>
+			
+				<script type="text/javascript" src="/assets/new-talenta/js/scriptPollGlobal.js?v=100000114"></script>
+		<script type="text/javascript" src="/assets/new-talenta/js/scriptDashboardPoll.js?v=100000114"></script>
+	
+			
+	<script type="text/javascript" src="/assets/new-talenta/js/scriptTask.js?v=100000114"></script>
+	<script type="text/javascript" src="/assets/new-talenta/js/commerce.js?v=100000114"></script>
+
+<div class="hiddendiv common"></div><div class="drag-target" style="left: 0px; touch-action: pan-y;"></div></body></html>

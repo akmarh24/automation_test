@@ -1,0 +1,160 @@
+<html><head>
+		<title>Talenta.co - Sign In</title>
+
+	<meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="DkQ4tYlBsDh5v8M2sVyv75_uVc2mDmHvC3sQrQceS4BIPWGG2hCFSQ7FoXH_JNeW7KQE-YtsM95OSGH7RHcAtw==">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Sign in to talenta.co">
+	<link rel="shortcut icon" href="/assets/images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/assets/new-talenta/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/new-talenta/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/new-talenta/css/jquery.bxslider.css">
+	<link rel="stylesheet" type="text/css" href="/assets/new-talenta/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/new-talenta/css/login.css">
+
+
+	<script type="text/javascript" async="" src="https://widget.intercom.io/widget/j37qizpv"></script><script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/api2/v1549298964057/recaptcha__en.js"></script><script type="text/javascript" async="" src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script><script type="text/javascript" async="" src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script><script type="text/javascript" src="/assets/new-talenta/js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+		<div class="loginBody">
+			<div class="container valign-wrapper h100vh">
+			    <div class="valign w100p">
+					<div class="row">
+						<div class="col l12 m12 s12">
+						  <a href="/site/index"><img src="/assets/new-talenta/images/talenta-new-logo2.png" class="center-align mb20" width="170"></a>
+						</div>
+					</div>
+					<div class="container">
+						<div class="row">
+							<form id="login-form" class="formsign" action="/site/sign-in" method="post" autocomplete="off">
+<input type="hidden" name="_csrf" value="DkQ4tYlBsDh5v8M2sVyv75_uVc2mDmHvC3sQrQceS4BIPWGG2hCFSQ7FoXH_JNeW7KQE-YtsM95OSGH7RHcAtw==">    <div class="row mt40 center-align">
+        <h1 class="titleA01 positionRelative white-text">Welcome to Talenta</h1>
+    </div>
+
+    <div class="row">
+        <div class="input-field col l6 offset-l3 s12">
+            <div class="form-group field-loginform-email required">
+<label class="control-label" for="loginform-email">Email</label>
+<input type="email" id="loginform-email" class="form-control" name="LoginForm[email]" aria-required="true">
+
+<p class="help-block help-block-error"></p>
+</div>        </div>
+        <div class="input-field col l6 offset-l3 s12">
+            <div class="form-group field-loginform-password required">
+<label class="control-label" for="loginform-password">Password</label>
+<input type="password" id="loginform-password" class="form-control" name="LoginForm[password]" aria-required="true">
+
+<p class="help-block help-block-error"></p>
+</div>        </div>
+    </div>
+        <div class="row">
+            </div>
+    <div class="row">
+        <div class="col l12 s12">
+            <button class="btn btnB02 positionRelative">LOGIN</button>
+        </div>
+    </div>
+</form>						</div>
+					</div>
+
+					<div class="row footer-login f9">
+						<div class="col l4 s12 center-align-down hide-on-med-and-down">
+							<ul class="center-align-down">
+								<li><a href="javascript:void(null);" class="showIntercom">Contact</a></li>
+								<li><a href="http://help.talenta.co" target="_blank">Help</a></li>
+								<li><a href="/site/terms">Terms &amp; Conditions</a></li>
+								<li><a href="/site/security">Security</a></li>
+							</ul>
+						</div>
+						<div class="col l4 s12 center-align-down mb10">
+							<a href="/site/forgot-password" class="center-align-down">FORGOT PASSWORD</a>
+						</div>
+						<div class="col l4 s12 center-align-down">
+							<p class="center-align-down">Copyright © 2019 PT. Mid Solusi Nusantara. All Rights Reserved</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hide-on-large-only w100vw h100vh valign-wrapper white pad-20 lineHeight14" id="modalResolution" style="position:absolute;left:0;top:0;z-index:99999">
+			<div class="valign">
+				<h2 class="lato-light grey1-text f18 center-align bold w100p floatNone">talenta.co requires a minimum screen resolution of <strong class="lato-black">1024px x 768px</strong>. <br><br>
+						We advise you to change your screen resolution as some functions may not work.</h2>
+						<br>
+
+						<div class="row">
+							<div class="col l12 s12 input-field center-align pad-l-n">
+								<input type="checkbox" id="dontShow" class="filled-in">
+								<label for="dontShow" class="grey-text cursorPointer f13">Dont show this again</label>
+							</div>
+							<div class="col l12 s12 mt30 center-align">
+								<a href="#!" class="btn btnB01 mr5" id="agree">Continue</a>
+								<a href="/site/index" class="btn btnB01">Home</a>
+							</div>
+						</div>
+			</div>
+		</div>
+
+<script src="/assets/34db10df/jquery.js"></script>
+<script src="/assets/1b97a55b/yii.js"></script>
+<script src="/assets/1b97a55b/yii.validation.js"></script>
+<script src="/assets/1b97a55b/yii.activeForm.js"></script>
+<script type="text/javascript">jQuery(function ($) {
+jQuery('#login-form').yiiActiveForm([{"id":"loginform-email","name":"email","container":".field-loginform-email","input":"#loginform-email","error":".help-block.help-block-error","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Email cannot be blank."});}},{"id":"loginform-password","name":"password","container":".field-loginform-password","input":"#loginform-password","error":".help-block.help-block-error","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Password cannot be blank."});}}], []);
+});</script>
+
+
+<script>
+  window.intercomSettings = {
+    app_id: "j37qizpv"
+  };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/j37qizpv';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+
+
+<script type="text/javascript">
+_linkedin_data_partner_id = "56388";
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=56388&fmt=gif" />
+</noscript>
+
+<script type="text/javascript">
+_linkedin_data_partner_id = "80394";
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=80394&fmt=gif" />
+</noscript>
+	<script type="text/javascript" src="/assets/new-talenta/js/materialize.min.js"></script>
+	<script type="text/javascript" src="/assets/new-talenta/js/jquery.bxslider.js"></script>
+	<script type="text/javascript" src="/assets/new-talenta/js/chart.min.js"></script>
+	<script type="text/javascript" src="/assets/new-talenta/js/jquery.animateNumber.min.js"></script>
+	<script type="text/javascript" src="/assets/new-talenta/js/mainscript.js?v=100000114"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#agree').click(function(){
+				$(this).parents('#modalResolution').hide(100);
+				if ($('#dontShow').is(':checked')) {
+					setCookie('dontShow', 'yes', 60);
+				}
+			})
+			$(".showIntercom").click(function(){Intercom("showNewMessage")});
+		})
+	</script>
+
+<script src="https://px.ads.linkedin.com/collect/?time=1549696635101&amp;pid=80394&amp;url=https%3A%2F%2Fstag7.talentadev.com%2Fsite%2Fsign-in&amp;fmt=js&amp;s=1" type="text/javascript"></script><div class="hiddendiv common"></div></body></html>
