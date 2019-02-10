@@ -30,7 +30,8 @@ end
 Then(/^success deleted gist$/) do
   @addgist_page = Gistpage.new
   @addgist_page.wait_until_view_gist_visible
-  expect(@@addgist_page.view_gist).to have_text('')
+  expect(@@addgist_page.empty_gist).to have_text('You don’t have any gists yet.
+')
 end
 
 Then(/^should be directed on list gist page$/) do
