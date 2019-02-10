@@ -11,5 +11,10 @@ $ cd akmar/
 $ bundle install
 $ cp .env.example .env
 ```
+### How to run
+open terminal
+cd on path source/mygist
+cucumber features/user.feature
+
 ### Noted
 please makesure for your internet connection is stable
