@@ -13,7 +13,9 @@ class Gistpage < SitePrism::Page
   
   element :view_gist, :xpath, '//strong[@class="user-select-contain gist-blob-name css-truncate-target"]'
   element :select_gist, :xpath, '//strong[@class="css-truncate-target"][contains(text(),"test1")]'
+  element :select_edit, :xpath, '//strong[@class="css-truncate-target"][contains(text(),"test2")]'
   element :delete_gist, :xpath, '//*[@id="gist-pjax-container"]/div[1]/div/div[1]/ul/li[2]/form/button'
+  element :empty_gist, :xpath, "//h3[contains(text(),'You don’t have any gists yet.')]"
   #(.//*[normalize-space(text()) and normalize-space(.)='Sign out'])[1]/following::button[1]
   element :edit, :link, 'Edit'
   element :dropdown_profile, :xpath, '//summary[@class="HeaderNavlink name mt-1"]'
@@ -46,7 +48,7 @@ class Gistpage < SitePrism::Page
     dropdown_profile.click
     your_gist.click
     see_all_gist.click
-    select_gist.click
+    select_edit.click
     delete_gist.click
   end
 
@@ -54,4 +56,7 @@ class Gistpage < SitePrism::Page
     view_gist.click
   end
 
+  def empty_gist
+    empty_gist.click
+  end
 end
