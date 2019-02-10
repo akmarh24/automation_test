@@ -7,7 +7,7 @@ class LoginPage < SitePrism::Page
   element :user_password, :xpath, '//input[@id="password"]'
   element :submit_signin, :xpath, '//input[@value="Sign in"]'
   element :signin_buttom, :xpath, '//a[@class="HeaderMenu-link no-underline mr-3"]'
-  element :welcome, :xpath, '//h2[@class="shelf-title"]'
+  element :welcome, :xpath, '//div[@class="border-bottom py-3 mt-3 mb-4"]//span[@class="css-truncate css-truncate-target"][contains(text(),"akmarh24")]'
 
 
   def login_as_user(user_detail)
