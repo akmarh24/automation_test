@@ -1,7 +1,7 @@
 Feature: CRUD Gist
 
 Background: user signin on gist
-	Given user is on login page
+    Given user is on login page
     When login as user akmar
     Then user should be redirected to git dashboard page
 	
